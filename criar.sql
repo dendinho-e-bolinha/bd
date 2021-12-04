@@ -1,19 +1,19 @@
 PRAGMA foreign_keys=ON;
 BEGIN TRANSACTION;
 
+DROP TABLE IF EXISTS Lecturer;
+DROP TABLE IF EXISTS TermSubjects;
 DROP TABLE IF EXISTS EvaluationEvent;
+DROP TABLE IF EXISTS Task;
+DROP TABLE IF EXISTS Period;
+DROP TABLE IF EXISTS Subject;
 DROP TABLE IF EXISTS GradeComponent;
 DROP TABLE IF EXISTS EvaluationType;
 DROP TABLE IF EXISTS GradeLimit;
-DROP TABLE IF EXISTS Term;
-DROP TABLE IF EXISTS Subject;
-DROP TABLE IF EXISTS TermSubjects;
-DROP TABLE IF EXISTS Task;
-DROP TABLE IF EXISTS Period;
-DROP TABLE IF EXISTS Professor;
 DROP TABLE IF EXISTS Classroom;
 DROP TABLE IF EXISTS Institution;
-DROP TABLE IF EXISTS Lecturer;
+DROP TABLE IF EXISTS Professor;
+DROP TABLE IF EXISTS Term;
 
 CREATE TABLE Term(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -52,9 +52,9 @@ CREATE TABLE Classroom(
 
 CREATE TABLE GradeLimit(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    upper REAL NOT NULL,
     lower REAL NOT NULL,
-    UNIQUE (upper, lower),
+    upper REAL NOT NULL,
+    UNIQUE (lower, upper),
     CONSTRAINT ValidRange CHECK (lower < upper)
 );
 
@@ -75,7 +75,7 @@ CREATE TABLE GradeComponent(
 CREATE TABLE Subject(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(255) NOT NULL UNIQUE,
-    color INTEGER NOT NULL CONSTRAINT ValidColor CHECK (color >= 0  AND color <= x'FFFFFF'),
+    color CHAR(6) NOT NULL CONSTRAINT ValidColor CHECK (color >= 0  AND color <= x'FFFFFF'),
     rootGrade REFERENCES GradeComponent NOT NULL
 );
 
@@ -88,7 +88,7 @@ CREATE TABLE Period(
     subject REFERENCES Subject NOT NULL,
     classroom REFERENCES Subject NOT NULL,
     CONSTRAINT ValidOccurence CHECK (startTime < endTime),
-    UNIQUE (startTime, endTime, weekDay)
+    UNIQUE (startTime, endTime, weekDay, subject)
 );
 
 CREATE TABLE Task(

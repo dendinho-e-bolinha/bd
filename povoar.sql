@@ -1,11 +1,14 @@
 PRAGMA foreign_keys=ON;
 BEGIN TRANSACTION;
 
+-- Term
+
 INSERT INTO Term VALUES (1, '1º Semestre 2020/2021', '2020-10-06', '2021-03-05');
-INSERT INTO Term VALUES (2, '2º Semestre 2021/2022', '2021-02-22', '2021-07-16');
-INSERT INTO Term VALUES (3, '1º Semestre 2021/2022', '2021-10-18', '2021-03-11');
+INSERT INTO Term VALUES (2, '2º Semestre 2020/2021', '2021-02-22', '2021-07-16');
+INSERT INTO Term VALUES (3, '1º Semestre 2021/2022', '2021-10-18', '2022-03-11');
 
 -- Institutions
+
 INSERT INTO Institution(id, name, address, email, phone, website) VALUES (
     1,
     'Faculdade de Engenharia da Universidade do Porto',
@@ -16,270 +19,781 @@ INSERT INTO Institution(id, name, address, email, phone, website) VALUES (
 );
 
 -- Professors
-INSERT INTO Professor(id, name, email, phone) VALUES (
+
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- ALGE
     1,
-    'Carla Alexandra Teixeira Lopes',
-    'ctl@fe.up.pt',
-    '+351 22 508 3246'
-);
-    
-INSERT INTO Professor(id, name, email, phone) VALUES (
-    2, 
-    'Michel Celestino Paiva Ferreira', 
-    'mpferrei@fc.up.pt', 
-    '+351 933 848 797'
+    'António Joaquim Mendes Ferreira',
+    'ferreira@fe.up.pt',
+    '+351 22 508 3462'
 );
 
-INSERT INTO Professor(id, name, email, phone, website) VALUES (
-    3, 
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- AMAT
+    2,
+    'Alexandre Miguel Prior Afonso',
+    'aafonso@fe.up.pt',
+    '+351 22 508 1365'
+);
+
+INSERT INTO Professor(id, name, email) VALUES (  -- AMAT
+    3,
+    'Luís Jorge Lima Ferras',
+    'lferras@fe.up.pt'
+);
+
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- AOCO
+    4,
+    'António José Duarte Araújo',
+    'aja@fe.up.pt',
+    '+351 22 508 3305'
+);
+
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- AOCO
+    5,
+    'João Paulo de Castro Canas Ferreira',
+    'jcf@fe.up.pt',
+    '+351 22 508 3367'
+);
+
+INSERT INTO Professor(id, name, email) VALUES (  -- FPRO
+    6,
+    'Afonso Manuel Maia Lopes Salgado de Sousa',
+    'ammiss@fe.up.pt'
+);
+
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- FPRO
+    7,
+    'João António Correia Lopes',
+    'jlopes@fe.up.pt',
+    '+351 22 508 3375'
+);
+
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- MDIS
+    8,
+    'Gabriel de Sousa Torcato David',
+    'gtd@fe.up.pt',
+    '+351 22 508 3224'
+);
+
+INSERT INTO Professor(id, name, email) VALUES (  -- MDIS
+    9,
+    'Renato Borges Araujo Moura Soeiro',
+    'rsoeiro@fe.up.pt'
+);
+
+------------------------------------------------------ 
+
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- CMAT
+    10,
+    'Ana Maria Azevedo Neves',
+    'ananeves@fe.up.pt',
+    '+351 22 508 2206'
+);
+
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- CMAT
+    11,
+    'José Augusto Trigo Barbosa',
+    'jtrigo@fe.up.pt',
+    '+351 22 508 3461'
+);
+
+INSERT INTO Professor(id, name, email, phone, website) VALUES (  -- FIS.1
+    12, 
     'Jaime Enrique Villate Matiz', 
     'villate@fe.up.pt', 
     '+351 22 508 3138', 
     'https://villate.org/'
 );
 
-INSERT INTO Professor(id, name, email) VALUES (
-    4, 
-    'Rui Filipe Lima Maranhão de Abreu', 
-    'rma@fe.up.pt'
+INSERT INTO Professor(id, name, email) VALUES (  -- FIS.1
+    13,
+    'Mercedes Esteves Filho',
+    'mfilho@fe.up.pt'
 );
 
-INSERT INTO Professor(id, name, email, phone) VALUES (
-    5, 
-    'André Monteiro de Oliveira Restivo', 
-    'arestivo@fe.up.pt', 
-    '+351 22 508 3321'
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- MEST
+    14,
+    'António Miguel da Fonseca Fernandes Gomes',
+    'agomes@fe.up.pt',
+    '+351 22 508 1573'
 );
 
-INSERT INTO Professor(id, name, email) VALUES (
-    6, 
-    'Pedro Manuel Pinto Ribeiro', 
-    'pribeiro@fc.up.pt'
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- MEST
+    15,
+    'João Pedro Carvalho Leal Mendes Moreira',
+    'jmoreira@fe.up.pt',
+    '+351 22 508 1573'
 );
 
-INSERT INTO Professor(id, name, email, phone) VALUES (
-    7, 
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- MEST
+    16,
+    'Maria Alexandra Ramalho de Oliveira',
+    'maoliveira@fe.up.pt',
+    '+351 225083438'
+);
+
+INSERT INTO Professor(id, name, email) VALUES (  -- PROG
+    17,
+    'João Paulo Fernandes',
+    'jpaulo@fe.up.pt'
+);
+
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- PROG
+    18,
+    'Jorge Alves da Silva',
+    'jsilva@fe.up.pt',
+    '+351 22 508 3394'
+);
+
+------------------------------------------------------
+
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- AED
+    19, 
     'Ana Paula Cunha da Rocha', 
     'arocha@fe.up.pt', 
     '+351 22 508 3322'
 );
 
-INSERT INTO Professor(id, name, email) VALUES (
-    8, 
+INSERT INTO Professor(id, name, email) VALUES (  -- AED
+    20, 
+    'Pedro Manuel Pinto Ribeiro', 
+    'pribeiro@fc.up.pt'
+);
+
+
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- BD
+    21,
+    'Carla Alexandra Teixeira Lopes',
+    'ctl@fe.up.pt',
+    '+351 22 508 3246'
+);
+    
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- BD
+    22, 
+    'Michel Celestino Paiva Ferreira', 
+    'mpferrei@fc.up.pt', 
+    '+351 933 848 797'
+);
+
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- LDTS
+    23, 
+    'André Monteiro de Oliveira Restivo', 
+    'arestivo@fe.up.pt', 
+    '+351 22 508 3321'
+);
+
+INSERT INTO Professor(id, name, email) VALUES (  -- LDTS
+    24, 
+    'Rui Filipe Lima Maranhão de Abreu', 
+    'rma@fe.up.pt'
+);
+
+INSERT INTO Professor(id, name, email) VALUES (  -- TC
+    25, 
     'João Carlos Viegas Martins Bispo', 
     'jbispo@fe.up.pt'
 );
     
-
-INSERT INTO Professor(id, name, email, phone) VALUES (
-    9, 
+INSERT INTO Professor(id, name, email, phone) VALUES (  -- TC
+    26, 
     'João Manuel Paiva Cardoso', 
     'jmpc@fe.up.pt', 
     '+351 22 508 3901'
 );
 
 -- Grade Limits
+
 INSERT INTO GradeLimit VALUES (1, 0, 20);
 
--- Subjects
+-- Evaluation Types
 
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (1, 'Avaliação de BD', 1)
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (2, 'Avaliação de F.II', 1)
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (3, 'Avaliação de AED', 1)
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (4, 'Avaliação de LDTS', 1)
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (5, 'Avaliação de TC', 1)
+INSERT INTO EvaluationType VALUES (1, 'practical');
+INSERT INTO EvaluationType VALUES (2, 'oral');
+INSERT INTO EvaluationType VALUES (3, 'written');
 
+-- Subjects and Grade Components
+
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (1, 'Avaliação de ALGE', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (2, 'Avaliação de AMAT', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (3, 'Avaliação de AOCO', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (4, 'Avaliação de FPRO', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (5, 'Avaliação de MDIS', 1);
+
+-------------------------------------------------
+
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (6, 'Avaliação de CMAT', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (7, 'Avaliação de FISI1', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (8, 'Avaliação de MEST', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (9, 'Avaliação de MPCP', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (10, 'Avaliação de PROG', 1);
+
+-------------------------------------------------
+
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (11, 'Avaliação de AED', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (12, 'Avaliação de BD', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (13, 'Avaliação de F.II', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (14, 'Avaliação de LDTS', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (15, 'Avaliação de TC', 1);
+
+-------------------------------------------------
 
 INSERT INTO Subject VALUES (
     1, 
-    'Bases de Dados', 
-    x'00FF00', 
+    'Álgebra', 
+    'EF9F7C', 
     1
 );
 
 INSERT INTO Subject VALUES (
     2, 
-    'Física 2', 
-    x'FF0000', 
+    'Análise Matemática', 
+    'D17CEF', 
     2
 );
 
 INSERT INTO Subject VALUES (
     3, 
-    'Algoritmos e Estruturas de Dados', 
-    x'FFFF33', 
+    'Arquitectura e Organização de Computadores', 
+    'E1ED74', 
     3
 );
 
 INSERT INTO Subject VALUES (
     4, 
-    'Laboratório de Desenho e Teste de Software', 
-    x'FF8C19', 
+    'Fundamentos da Programação', 
+    '7CE8EF', 
     4
 );
 
 INSERT INTO Subject VALUES (
     5, 
-    'Teoria da Computação', 
-    x'0055FF', 
+    'Matemática Discreta', 
+    '92ED74', 
     5
 );
 
+-------------------------------------------------
+
+INSERT INTO Subject VALUES (
+    6, 
+    'Complementos de Matemática', 
+    'EF9F7C', 
+    6
+);
+
+INSERT INTO Subject VALUES (
+    7, 
+    'Física I', 
+    '7CEFBD', 
+    7
+);
+
+INSERT INTO Subject VALUES (
+    8, 
+    'Métodos Estatísticos', 
+    '92ED74', 
+    8
+);
+
+INSERT INTO Subject VALUES (
+    9, 
+    'Microprocessadores e Computadores Pessoais', 
+    'E1ED74', 
+    9
+);
+
+INSERT INTO Subject VALUES (
+    10, 
+    'Programação', 
+    '7CE8EF', 
+    10
+);
+
+-------------------------------------------------
+
+INSERT INTO Subject VALUES (
+    11, 
+    'Algoritmos e Estruturas de Dados', 
+    'E1ED74', 
+    11
+);
+
+INSERT INTO Subject VALUES (
+    12, 
+    'Bases de Dados', 
+    '92ED74', 
+    12
+);
+
+INSERT INTO Subject VALUES (
+    13, 
+    'Física 2', 
+    'D17CEF', 
+    13
+);
+
+INSERT INTO Subject VALUES (
+    14, 
+    'Laboratório de Desenho e Teste de Software', 
+    'EF9F7C', 
+    14
+);
+
+INSERT INTO Subject VALUES (
+    15, 
+    'Teoria da Computação', 
+    '7CE8EF', 
+    15
+);
+
+-- Term Subjects
+
+INSERT INTO TermSubjects VALUES (1, 1), (1, 2), (1, 3), (1, 4), (1, 5); -- 1S 2020/2021
+INSERT INTO TermSubjects VALUES (2, 6), (2, 7), (2, 8), (2, 9), (2, 10); -- 2S 2020/2021
+INSERT INTO TermSubjects VALUES (3, 11), (3, 12), (3, 13), (3, 14), (3, 15); -- 1S 2021/2022
 
 -- Classrooms
+
 INSERT INTO Classroom VALUES (1, "EaD", 1);
-INSERT INTO Classroom VALUES (2, "B103", 1);
-INSERT INTO Classroom VALUES (3, "B110", 1);
-INSERT INTO Classroom VALUES (4, "B213", 1);
-INSERT INTO Classroom VALUES (5, "B304", 1);
-INSERT INTO Classroom VALUES (6, "B308", 1);
-INSERT INTO Classroom VALUES (7, "B323", 1);
+INSERT INTO Classroom VALUES (2, "B005", 1);
+INSERT INTO Classroom VALUES (3, "B011", 1);
+INSERT INTO Classroom VALUES (4, "B013", 1);
+INSERT INTO Classroom VALUES (5, "B014", 1);
+INSERT INTO Classroom VALUES (6, "B017", 1);
+INSERT INTO Classroom VALUES (7, "B103", 1);
+INSERT INTO Classroom VALUES (8, "B110", 1);
+INSERT INTO Classroom VALUES (9, "B201", 1);
+INSERT INTO Classroom VALUES (10, "B208", 1);
+INSERT INTO Classroom VALUES (11, "B213", 1);
+INSERT INTO Classroom VALUES (12, "B304", 1);
+INSERT INTO Classroom VALUES (13, "B308", 1);
+INSERT INTO Classroom VALUES (14, "B323", 1);
 
--- Period
+-- Periods
+
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     1,
-    '14:00:00',
-    '15:00:00',
+    '09:00:00',
+    '10:30:00',
     'monday',
-    3,
-    1
+    3, -- AOCO
+    1 -- EaD
 );
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     2,
-    '15:00:00',
-    '16:00:00',
+    '10:30:00',
+    '12:00:00',
     'monday',
-    1,
-    1
+    5, -- MDIS
+    1 -- EaD
 );
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     3,
-    '16:00:00',
-    '17:30:00',
+    '12:00:00',
+    '13:30:00',
     'monday',
-    2,
-    1
+    4, -- FPRO
+    1 -- EaD
 );
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     4,
-    '14:00:00',
-    '16:00:00',
+    '08:30:00',
+    '10:30:00',
     'tuesday',
-    5,
-    3 
+    1, -- ALGE
+    4 -- B013
 );
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     5,
-    '16:00:00',
-    '18:00:00',
+    '10:30:00',
+    '12:30:00',
     'tuesday',
-    4,
-    5
+    4, -- FPRO
+    10 -- B208
 );
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     6,
-    '09:00:00',
-    '11:00:00',
-    'wednesday',
-    3,
-    6
+    '14:00:00',
+    '16:00:00',
+    'tuesday',
+    3, -- AOCO
+    3 -- B011
 );
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     7,
-    '11:00:00',
-    '12:30:00',
+    '08:30:00',
+    '10:00:00',
     'wednesday',
-    2,
-    7  
+    5, -- MDIS
+    1 -- EaD
 );
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     8,
-    '14:00:00',
-    '16:00:00',
-    'thursday',
-    4,
-    1 
+    '10:00:00',
+    '11:30:00',
+    'wednesday',
+    2, -- AMAT
+    1 -- EaD
 );
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     9,
-    '16:00:00',
-    '18:00:00',
-    'thursday',
-    5,
-    1
+    '11:30:00',
+    '13:30:00',
+    'wednesday',
+    1, -- ALGE
+    1 -- EaD
 );
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     10,
-    '18:00:00',
-    '19:00:00',
+    '09:00:00',
+    '10:30:00',
     'thursday',
-    3,
-    1  
+    2, -- AMAT
+    1 -- EaD
 );
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     11,
-    '19:00:00',
-    '20:00:00',
+    '10:30:00',
+    '12:00:00',
     'thursday',
-    1,
-    1 
+    4, -- FPRO
+    1 -- EaD
 );
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     12,
-    '14:00:00',
-    '16:00:00',
+    '12:00:00',
+    '13:30:00',
+    'thursday',
+    3, -- AOCO
+    1 -- EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    13,
+    '09:00:00',
+    '11:00:00',
     'friday',
-    1,
-    2
+    5, -- MDIS
+    2 -- B005
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    14,
+    '11:00:00',
+    '13:00:00',
+    'friday',
+    2, -- AMAT
+    2 -- B005
+);
+
+-------------------------------------------------
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    15,
+    '09:00:00',
+    '10:00:00',
+    'monday',
+    6, -- CMAT
+    1 --EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    16,
+    '10:00:00',
+    '11:00:00',
+    'monday',
+    7, -- FISI1
+    1 -- EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    17,
+    '11:00:00',
+    '12:30:00',
+    'monday',
+    10, -- PROG
+    1 -- EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    18,
+    '09:00:00',
+    '11:00:00',
+    'tuesday',
+    7, -- FISI1
+    5 -- B014
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    19,
+    '11:00:00',
+    '13:00:00',
+    'tuesday',
+    6, -- CMAT
+    5 -- B014
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    20,
+    '09:00:00',
+    '10:00:00',
+    'wednesday',
+    7, -- FISI1
+    1 -- EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    21,
+    '10:00:00',
+    '11:00:00',
+    'wednesday',
+    6, -- CMAT
+    1 -- EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    22,
+    '11:00:00',
+    '13:00:00',
+    'wednesday',
+    8, -- MEST
+    1 -- EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    23,
+    '17:30:00',
+    '19:30:00',
+    'wednesday',
+    10, -- PROG
+    9 -- B201
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    24,
+    '09:00:00',
+    '10:30:00',
+    'thursday',
+    10, -- PROG      
+    1 -- EaD
 );
 
 
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    25,
+    '10:30:00',
+    '12:30:00', 
+    'thursday',  
+    9, -- MPCP
+    1 -- EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    26,
+    '13:30:00',
+    '15:30:00', 
+    'friday',  
+    9, -- MPCP
+    9 -- B201
+); 
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    27,
+    '15:30:00',
+    '17:30:00',
+    'friday', 
+    8, -- MEST 
+    6 -- B017
+);
+
+-------------------------------------------------
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    28,
+    '14:00:00',
+    '15:00:00',
+    'monday',
+    11, -- AED
+    1 -- EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    29,
+    '15:00:00',
+    '16:00:00',
+    'monday',
+    12, -- BD
+    1 -- EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    30,
+    '16:00:00',
+    '17:30:00',
+    'monday',
+    13, -- F.II
+    1 -- EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    31,
+    '14:00:00',
+    '16:00:00',
+    'tuesday',
+    15, -- TC
+    8  -- B110
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    32,
+    '16:00:00',
+    '18:00:00',
+    'tuesday',
+    14, -- LDTS
+    12 -- B304
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    33,
+    '09:00:00',
+    '11:00:00',
+    'wednesday',
+    11, -- AED
+    13 -- B308
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    34,
+    '11:00:00',
+    '12:30:00',
+    'wednesday',
+    13, -- F.II
+    14 -- B323
+); 
+  
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    35,
+    '14:00:00',
+    '16:00:00',
+    'thursday',
+    14, -- LDTS
+    1 -- EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    36,
+    '16:00:00',
+    '18:00:00',
+    'thursday',
+    15, -- TC
+    1  --EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    37,
+    '18:00:00',
+    '19:00:00',
+    'thursday',
+    11, -- AED
+    1  -- EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    38,
+    '19:00:00',
+    '20:00:00',
+    'thursday',
+    12, -- BD
+    1 -- EaD
+);
+
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+    39,
+    '14:00:00',
+    '16:00:00',
+    'friday',
+    12, -- BD
+    7 -- B103
+);
+
 -- Tasks
-INSERT INTO Task VALUES (
+
+INSERT INTO Task(id, name, done, subject) VALUES (
     1,
-    'Estudar AED',
-    'Ver slides sobre algoritmos de Sorting',
-    0,
-    3,
+    'Ver aulas de AOCO',
+    1, -- done
+    3 -- AOCO
 );
 
 INSERT INTO Task VALUES (
     2,
-    'Fazer projeto de BD',
-    'Acabar 1ª entrega do trabalho',
-    1,
-    1
-)
+    'Fazer projeto de PROG',
+    'Implementar leitura de ficheiros e dar commit',
+    1, -- done
+    10 -- PROG
+);
 
 INSERT INTO Task VALUES (
     3,
-    'Fazer projeto de BD',
-    'Acabar relatório e povoamento da base de dados',
-    0,
-    1,
+    'Estudar AED',
+    'Ver slides sobre algoritmos de Sorting',
+    0, -- not done
+    11 -- AED
 );
 
+INSERT INTO Task VALUES (
+    4,
+    'Fazer projeto de BD',
+    'Acabar 1ª entrega do trabalho',
+    1, -- done
+    12 -- BD
+);
 
--- Professor
-UPDATE Professor WHERE id = 1 SET photo = x''
-UPDATE Professor WHERE id = 2 SET photo = x''
-UPDATE Professor WHERE id = 3 SET photo = x''
-UPDATE Professor WHERE id = 4 SET photo = x''
-UPDATE Professor WHERE id = 5 SET photo = x''
-UPDATE Professor WHERE id = 6 SET photo = x''
-UPDATE Professor WHERE id = 7 SET photo = x''
-UPDATE Professor WHERE id = 8 SET photo = x''
-UPDATE Professor WHERE id = 9 SET photo = x''
+INSERT INTO Task VALUES (
+    5,
+    'Fazer projeto de BD',
+    'Acabar relatório e povoamento da base de dados',
+    0, -- not done
+    12 -- BD
+);
+
+-- Professor photos
+
+UPDATE Professor SET photo = x'' WHERE id = 1;
+UPDATE Professor SET photo = x'' WHERE id = 2;
+UPDATE Professor SET photo = x'' WHERE id = 3;
+UPDATE Professor SET photo = x'' WHERE id = 4;
+UPDATE Professor SET photo = x'' WHERE id = 5;
+UPDATE Professor SET photo = x'' WHERE id = 6;
+UPDATE Professor SET photo = x'' WHERE id = 7;
+UPDATE Professor SET photo = x'' WHERE id = 8;
+UPDATE Professor SET photo = x'' WHERE id = 9;
+UPDATE Professor SET photo = x'' WHERE id = 10;
+UPDATE Professor SET photo = x'' WHERE id = 11;
+UPDATE Professor SET photo = x'' WHERE id = 12;
+UPDATE Professor SET photo = x'' WHERE id = 13;
+UPDATE Professor SET photo = x'' WHERE id = 14;
+UPDATE Professor SET photo = x'' WHERE id = 15;
+UPDATE Professor SET photo = x'' WHERE id = 16;
+UPDATE Professor SET photo = x'' WHERE id = 17;
+UPDATE Professor SET photo = x'' WHERE id = 18;
+UPDATE Professor SET photo = x'' WHERE id = 19;
+UPDATE Professor SET photo = x'' WHERE id = 20;
+UPDATE Professor SET photo = x'' WHERE id = 21;
+UPDATE Professor SET photo = x'' WHERE id = 22;
+UPDATE Professor SET photo = x'' WHERE id = 23;
+UPDATE Professor SET photo = x'' WHERE id = 24;
+UPDATE Professor SET photo = x'' WHERE id = 25;
+UPDATE Professor SET photo = x'' WHERE id = 26;
 
 COMMIT;
