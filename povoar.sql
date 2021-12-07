@@ -1,6 +1,8 @@
 PRAGMA foreign_keys=ON;
 BEGIN TRANSACTION;
 
+-- grades and blobs
+
 -- Term
 
 INSERT INTO Term VALUES (1, '1º Semestre 2020/2021', '2020-10-06', '2021-03-05');
@@ -217,6 +219,8 @@ INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (2, 'Avaliação de AMAT
 INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (3, 'Avaliação de AOCO', 1);
 INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (4, 'Avaliação de FPRO', 1);
 INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (5, 'Avaliação de MDIS', 1);
+
+
 
 -------------------------------------------------
 
@@ -766,6 +770,254 @@ INSERT INTO Task VALUES (
     0, -- not done
     12 -- BD
 );
+
+
+-- Lecturers
+
+INSERT INTO Lecturer VALUES (
+    1,
+    5
+);
+
+INSERT INTO Lecturer VALUES (
+    2,
+    8
+);
+
+INSERT INTO Lecturer VALUES (
+    3,
+    7
+);
+
+INSERT INTO Lecturer VALUES (
+    4,
+    1
+);
+
+INSERT INTO Lecturer VALUES (
+    5,
+    6
+);
+
+INSERT INTO Lecturer VALUES (
+    6,
+    4
+);
+INSERT INTO Lecturer VALUES (
+    7,
+    8
+);
+
+INSERT INTO Lecturer VALUES (
+    8,
+    2
+);
+
+INSERT INTO Lecturer VALUES (
+    9,
+    1
+);
+
+INSERT INTO Lecturer VALUES (
+    10,
+    2
+);
+
+INSERT INTO Lecturer VALUES (
+    11,
+    7
+);
+
+INSERT INTO Lecturer VALUES (
+    12,
+    5
+);
+
+INSERT INTO Lecturer VALUES (
+    13,
+    9
+);
+
+INSERT INTO Lecturer VALUES (
+    14,
+    3
+);
+
+-------------------------------------------------
+
+INSERT INTO Lecturer VALUES (
+    15,
+    11
+);
+
+
+INSERT INTO Lecturer VALUES (
+    16,
+    12
+);
+
+
+INSERT INTO Lecturer VALUES (
+    17,
+    18
+);
+
+
+INSERT INTO Lecturer VALUES (
+    18,
+    13
+);
+
+
+INSERT INTO Lecturer VALUES (
+    19,
+    10
+);
+
+
+INSERT INTO Lecturer VALUES (
+    20,
+    12
+);
+
+INSERT INTO Lecturer VALUES (
+    21,
+    11
+);
+
+
+INSERT INTO Lecturer VALUES (
+    22,
+    14
+);
+
+
+INSERT INTO Lecturer VALUES (
+    22,
+    15
+);
+
+
+INSERT INTO Lecturer VALUES (
+    23,
+    17
+);
+
+INSERT INTO Lecturer VALUES (
+    24,
+    18
+);
+
+
+INSERT INTO Lecturer VALUES (
+    25,
+    5
+);
+
+
+INSERT INTO Lecturer VALUES (
+    26,
+    5
+);
+
+
+INSERT INTO Lecturer VALUES (
+    27,
+    16
+);
+
+-------------------------------------------------
+
+INSERT INTO Lecturer VALUES (
+    28,
+    19
+);
+
+
+INSERT INTO Lecturer VALUES (
+    28,
+    20
+);
+
+INSERT INTO Lecturer VALUES (
+    29,
+    21
+);
+
+INSERT INTO Lecturer VALUES (
+    29,
+    22
+);
+
+INSERT INTO Lecturer VALUES (
+    30,
+    12
+);
+
+INSERT INTO Lecturer VALUES (
+    31,
+    25
+);
+
+INSERT INTO Lecturer VALUES (
+    32,
+    23
+);
+
+INSERT INTO Lecturer VALUES (
+    33,
+    19
+);
+
+INSERT INTO Lecturer VALUES (
+    34,
+    12
+);
+
+INSERT INTO Lecturer VALUES (
+    35,
+    24
+);
+
+INSERT INTO Lecturer VALUES (
+    36,
+    26
+);
+
+INSERT INTO Lecturer VALUES (
+    37,
+    19
+);
+
+INSERT INTO Lecturer VALUES (
+    37,
+    20
+);
+
+INSERT INTO Lecturer VALUES (
+    38,
+    21
+);
+
+INSERT INTO Lecturer VALUES (
+    38,
+    22
+);
+
+INSERT INTO Lecturer VALUES (
+    39,
+    21
+);
+
+-- Evaluation Events
+
+INSERT INTO EvaluationEvent VALUES (
+    
+);
+
+-------------------------------------------------
+
+-------------------------------------------------
 
 -- Professor photos
 

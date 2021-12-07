@@ -119,8 +119,8 @@ CREATE TABLE TermSubjects(
 );
 
 CREATE TABLE Lecturer(
-    professor REFERENCES Professor NOT NULL,
     period REFERENCES Period NOT NULL,
+    professor REFERENCES Professor NOT NULL,
     PRIMARY KEY (professor, period)
 );
 
