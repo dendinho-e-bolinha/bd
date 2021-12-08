@@ -205,6 +205,7 @@ INSERT INTO Professor(id, name, email, phone) VALUES (  -- TC
 -- Grade Limits
 
 INSERT INTO GradeLimit VALUES (1, 0, 20);
+INSERT INTO GradeLimit VALUES(2, 0, 1);
 
 -- Evaluation Types
 
@@ -219,8 +220,6 @@ INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (2, 'Avaliação de AMAT
 INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (3, 'Avaliação de AOCO', 1);
 INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (4, 'Avaliação de FPRO', 1);
 INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (5, 'Avaliação de MDIS', 1);
-
-
 
 -------------------------------------------------
 
@@ -240,8 +239,584 @@ INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (15, 'Avaliação de TC'
 
 -------------------------------------------------
 
+INSERT INTO GradeComponent VALUES (
+    16,
+    'MT ALGE',
+    17.65,
+    0.5,
+    1,
+    1
+);
+
+INSERT INTO GradeComponent VALUES (
+    17,
+    'MT2 ALGE',
+    17,
+    0.5,
+    1,
+    1
+);
+
+INSERT INTO GradeComponent VALUES (
+    18,
+    'MT AMAT',
+    20,
+    0.5,
+    1,
+    2
+);
+
+INSERT INTO GradeComponent VALUES (
+    19,
+    'MT 2 AMAT',
+    18.67,
+    0.5,
+    1,
+    2
+);
+
+INSERT INTO GradeComponent VALUES (
+    20,
+    'MT AOCO',
+    18.5,
+    0.5,
+    1,
+    3
+);
+
+INSERT INTO GradeComponent VALUES (
+    21,
+    'MT 2 AOCO',
+    18.9,
+    0.5,
+    1,
+    3
+);
+
+INSERT INTO GradeComponent VALUES (
+    22,
+    'Melhoria AOCO',
+    17.6,
+    0,
+    1,
+    3
+);
+
+INSERT INTO GradeComponent VALUES (
+    23,
+    'PEs FPRO',
+    20,
+    0.5,
+    1,
+    4
+)
+
+INSERT INTO GradeComponent VALUES (
+    24,
+    'PE1 FPRO',
+    0,
+    0,
+    1,
+    23
+);
+
+
+INSERT INTO GradeComponent VALUES (
+    25,
+    'PE2 FPRO',
+    20,
+    0.333,
+    1,
+    23
+);
+
+
+INSERT INTO GradeComponent VALUES (
+    26,
+    'PE3 FPRO',
+    20,
+    0.333,
+    1,
+    23
+);
+
+INSERT INTO GradeComponent VALUES (
+    27,
+    'PE4 FPRO',
+    20,
+    0.333,
+    1,
+    23
+);
+
+INSERT INTO GradeComponent VALUES (
+    28,
+    'PE4 FPRO',
+    20,
+    0.333,
+    1,
+    23
+);
+
+INSERT INTO GradeComponent VALUES (
+    29,
+    'AD FPRO (REs, LEs e PROJ)',
+    20,
+    0.2,
+    1,
+    4
+);
+
+INSERT INTO GradeComponent VALUES (
+    30,
+    'LEs FPRO',
+    20,
+    0,
+    1,
+    29
+);
+
+INSERT INTO GradeComponent VALUES (
+    31,
+    'REs FPRO',
+    19.8,
+    0,
+    1,
+    29
+);
+
+INSERT INTO GradeComponent VALUES (
+    32,
+    'PROJ',
+    20,
+    1,
+    1,
+    29
+);
+
+INSERT INTO GradeComponent VALUES (
+    33,
+    'TE1 FPRO',
+    20,
+    0.3,
+    1,
+    4
+);
+
+INSERT INTO GradeComponent VALUES (
+    34,
+    'MT1 MDIS',
+    16.8,
+    0.3125,
+    1,
+    5
+);
+
+INSERT INTO GradeComponent VALUES (
+    35,
+    'MT2 MDIS',
+    20,
+    0.3125,
+    1,
+    5
+);
+
+INSERT INTO GradeComponent VALUES (
+    36,
+    'MT3 MDIS',
+    12.4,
+    0.0625,
+    1,
+    5
+);
+
+INSERT INTO GradeComponent VALUES (
+    36,
+    'MT4 MDIS + KAHOOT',
+    20,
+    0.3125,
+    1,
+    5
+);
+
+-------------------------------------------------
+
+INSERT INTO GradeComponent VALUES (
+    37,
+    'MT1 CMAT',
+    19.3,
+    0.5,
+    1,
+    6
+);
+
+INSERT INTO GradeComponent VALUES (
+    38,
+    'MT2 CMAT',
+    19.5,
+    0.5,
+    1,
+    6
+);
+
+INSERT INTO GradeComponent VALUES (
+    39,
+    'MT1 FIS1',
+    11.3,
+    0,
+    1,
+    7
+);
+
+INSERT INTO GradeComponent VALUES (
+    40,
+    'MT2 FIS1',
+    9,
+    0,
+    1,
+    7
+);
+
+INSERT INTO GradeComponent VALUES (
+    41,
+    'Exame FISI',
+    14,
+    0,
+    1,
+    7
+);
+
+INSERT INTO GradeComponent VALUES (
+    42,
+    'Melhoria FISI',
+    16.3,
+    1,
+    1,
+    7
+);
+
+INSERT INTO GradeComponent VALUES (
+    36,
+    'MT3 MDIS',
+    12.4,
+    0.3125,
+    1,
+    8
+);
+
+INSERT INTO GradeComponent VALUES (
+    36,
+    'AD MPCP',
+    19.6,
+    0.5,
+    1,
+    // TODO
+);
+
+INSERT INTO GradeComponent VALUES (
+    36,
+    'Exercicios Assembly MPCP',
+    20,
+    0.4,
+    1,
+    //TODO
+);
+
+INSERT INTO GradeComponent VALUES (
+    36,
+    'Assiduidade MPCP',
+    1,
+    0.2,
+    2,
+    // TODO
+);
+
+INSERT INTO GradeComponent VALUES (
+    43,
+    'MT1 MPCP',
+    19,
+    0.4,
+    1,
+    // TODO
+);
+
+INSERT INTO GradeComponent VALUES (
+    44,
+    'Exame MPCP',
+    18,
+    0,
+    1,
+    9
+);
+
+INSERT INTO GradeComponent VALUES (
+    43,
+    'Melhoria MPCP',
+    19.6,
+    0.5,
+    1,
+    9
+);
+
+INSERT INTO GradeComponent VALUES (
+    45,
+    'Projetos PROG',
+    19,
+    0.4,
+    1,
+    10
+);
+
+INSERT INTO GradeComponent VALUES (
+    45,
+    'Projeto PROG 1',
+    19.1,
+    0.5,
+    1,
+    -- todo
+);
+
+INSERT INTO GradeComponent VALUES (
+    45,
+    'Projeto PROG 2',
+    18.9,
+    0.5,
+    1,
+    // TODO
+);
+
+INSERT INTO GradeComponent VALUES (
+    45,
+    'Exame PROG',
+    19.6,
+    0,
+    1,
+    10
+);
+
+INSERT INTO GradeComponent VALUES (
+    45,
+    'Melhoria PROG',
+    20,
+    0.6,
+    1,
+    10
+);
+
+-------------------------------------------------
+
+INSERT INTO GradeComponent VALUES (
+    47,
+    'MT1 AED',
+    17.65,
+    0.5,
+    1,
+    11
+);
+
+INSERT INTO GradeComponent VALUES (
+    28,
+    'MT2 AED',
+    17.65,
+    0.5,
+    1,
+    11
+);
+
+INSERT INTO GradeComponent VALUES (
+    49,
+    'Projeto',
+    17.65,
+    0.5,
+    1,
+    12
+);
+
+INSERT INTO GradeComponent VALUES (
+    50,
+    'Entrega 1',
+    17.65,
+    0.5,
+    1,
+    12
+);
+
+INSERT INTO GradeComponent VALUES (
+    51,
+    'Entrega 2',
+    17.65,
+    0.5,
+    1,
+    12
+);
+
+INSERT INTO GradeComponent VALUES (
+    52,
+    'Entrega 3',
+    17.65,
+    0.5,
+    1,
+    12
+);
+
+INSERT INTO GradeComponent VALUES (
+    53,
+    'Entrega 4',
+    17.65,
+    0.5,
+    1,
+    12
+);
+
+INSERT INTO GradeComponent VALUES (
+    54,
+    'Exame',
+    17.65,
+    0.5,
+    1,
+    12
+);
+
+INSERT INTO GradeComponent VALUES (
+    55,
+    'MT1',
+    17.65,
+    0.5,
+    1,
+    13
+);
+
+INSERT INTO GradeComponent VALUES (
+    56,
+    'Exame',
+    17.65,
+    0.5,
+    1,
+    13
+);
+
+INSERT INTO GradeComponent VALUES (
+    57,
+    'Projeto',
+    17.65,
+    0.5,
+    1,
+    14
+);
+
+INSERT INTO GradeComponent VALUES (
+    58,
+    'Entrega 1',
+    17.65,
+    0.5,
+    1,
+    14
+);
+
+INSERT INTO GradeComponent VALUES (
+    59,
+    'Entrega 2',
+    17.65,
+    0.5,
+    1,
+    4
+);
+
+INSERT INTO GradeComponent VALUES (
+    59,
+    'Entrega 2',
+    17.65,
+    0.5,
+    1,
+    4
+);
+
+INSERT INTO GradeComponent VALUES (
+    59,
+    'Entrega 2',
+    17.65,
+    0.5,
+    1,
+    4
+);
+
+INSERT INTO GradeComponent VALUES (
+    59,
+    'Entrega 2',
+    17.65,
+    0.5,
+    1,
+    4
+);
+
+INSERT INTO GradeComponent VALUES (
+    59,
+    'Entrega 2',
+    17.65,
+    0.5,
+    1,
+    4
+);
+
+INSERT INTO GradeComponent VALUES (
+    59,
+    'Entrega 2',
+    17.65,
+    0.5,
+    1,
+    4
+);
+
+INSERT INTO GradeComponent VALUES (
+    59,
+    'Entrega 2',
+    17.65,
+    0.5,
+    1,
+    4
+);
+
+INSERT INTO GradeComponent VALUES (
+    59,
+    'Entrega 2',
+    17.65,
+    0.5,
+    1,
+    4
+);
+
+INSERT INTO GradeComponent VALUES (
+    59,
+    'Entrega 2',
+    17.65,
+    0.5,
+    1,
+    4
+);
+
+INSERT INTO GradeComponent VALUES (
+    59,
+    'Entrega 2',
+    17.65,
+    0.5,
+    1,
+    4
+);
+
+INSERT INTO GradeComponent VALUES (
+    59,
+    'Entrega 2',
+    17.65,
+    0.5,
+    1,
+    4
+);
+
+
+---------------------------------------------
+
 INSERT INTO Subject VALUES (
-    1, 
+    60, 
     'Álgebra', 
     'EF9F7C', 
     1
@@ -1012,7 +1587,8 @@ INSERT INTO Lecturer VALUES (
 -- Evaluation Events
 
 INSERT INTO EvaluationEvent VALUES (
-    
+    1,
+
 );
 
 -------------------------------------------------
