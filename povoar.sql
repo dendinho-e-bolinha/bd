@@ -207,8 +207,8 @@ INSERT INTO GradeLimit VALUES(2, 0, 1);
 
 -- Evaluation Types
 
-INSERT INTO EvaluationType VALUES (1, 'practical');
-INSERT INTO EvaluationType VALUES (2, 'oral');
+INSERT INTO EvaluationType VALUES (1, 'oral');
+INSERT INTO EvaluationType VALUES (2, 'practical');
 INSERT INTO EvaluationType VALUES (3, 'written');
 
 -- Subjects and Grade Components
@@ -347,15 +347,6 @@ INSERT INTO GradeComponent VALUES (
 
 INSERT INTO GradeComponent VALUES (
     28,
-    'PE4 FPRO',
-    20,
-    0.333,
-    1,
-    23
-);
-
-INSERT INTO GradeComponent VALUES (
-    29,
     'AD FPRO (REs, LEs e PROJ)',
     20,
     0.2,
@@ -364,34 +355,34 @@ INSERT INTO GradeComponent VALUES (
 );
 
 INSERT INTO GradeComponent VALUES (
-    30,
+    29,
     'LEs FPRO',
     20,
     0,
     1,
-    29
+    28
 );
 
 INSERT INTO GradeComponent VALUES (
-    31,
+    30,
     'REs FPRO',
     19.8,
     0,
     1,
-    29
+    28
 );
 
 INSERT INTO GradeComponent VALUES (
-    32,
+    31,
     'PROJ FPRO',
     20,
     1,
     1,
-    29
+    28
 );
 
 INSERT INTO GradeComponent VALUES (
-    33,
+    32,
     'TE1 FPRO',
     20,
     0.3,
@@ -400,7 +391,7 @@ INSERT INTO GradeComponent VALUES (
 );
 
 INSERT INTO GradeComponent VALUES (
-    34,
+    33,
     'MT1 MDIS',
     16.8,
     0.3125,
@@ -409,7 +400,7 @@ INSERT INTO GradeComponent VALUES (
 );
 
 INSERT INTO GradeComponent VALUES (
-    35,
+    34,
     'MT2 MDIS',
     20,
     0.3125,
@@ -418,7 +409,7 @@ INSERT INTO GradeComponent VALUES (
 );
 
 INSERT INTO GradeComponent VALUES (
-    36,
+    35,
     'MT3 MDIS',
     12.4,
     0.0625,
@@ -427,7 +418,7 @@ INSERT INTO GradeComponent VALUES (
 );
 
 INSERT INTO GradeComponent VALUES (
-    37,
+    36,
     'MT4 MDIS + KAHOOT',
     20,
     0.3125,
@@ -438,7 +429,7 @@ INSERT INTO GradeComponent VALUES (
 -------------------------------------------------
 
 INSERT INTO GradeComponent VALUES (
-    38,
+    37,
     'MT1 CMAT',
     19.3,
     0.5,
@@ -447,7 +438,7 @@ INSERT INTO GradeComponent VALUES (
 );
 
 INSERT INTO GradeComponent VALUES (
-    39,
+    38,
     'MT2 CMAT',
     19.5,
     0.5,
@@ -456,7 +447,7 @@ INSERT INTO GradeComponent VALUES (
 );
 
 INSERT INTO GradeComponent VALUES (
-    40,
+    39,
     'MT1 FIS1',
     11.3,
     0,
@@ -465,7 +456,7 @@ INSERT INTO GradeComponent VALUES (
 );
 
 INSERT INTO GradeComponent VALUES (
-    41,
+    40,
     'MT2 FIS1',
     9,
     0,
@@ -474,7 +465,7 @@ INSERT INTO GradeComponent VALUES (
 );
 
 INSERT INTO GradeComponent VALUES (
-    42,
+    41,
     'Exame FISI',
     14,
     0,
@@ -483,7 +474,7 @@ INSERT INTO GradeComponent VALUES (
 );
 
 INSERT INTO GradeComponent VALUES (
-    43,
+    42,
     'Melhoria FISI',
     16.3,
     1,
@@ -492,7 +483,7 @@ INSERT INTO GradeComponent VALUES (
 );
 
 INSERT INTO GradeComponent VALUES (
-    44,
+    43,
     'Projeto MEST',
     19.1,
     0.3,
@@ -501,7 +492,7 @@ INSERT INTO GradeComponent VALUES (
 );
 
 INSERT INTO GradeComponent VALUES (
-    45,
+    44,
     'Exame MEST',
     11.4,
     0.7,
@@ -688,7 +679,7 @@ INSERT INTO GradeComponent VALUES (
     0,
     0.5,
     1,
-    62
+    63
 );
 
 INSERT INTO GradeComponent VALUES (
@@ -1120,7 +1111,7 @@ INSERT INTO EvaluationEvent VALUES (
     4, -- ALGE
     1, -- B103
     3, -- Written
-    30 -- MT1 ALGE
+    29 -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
@@ -1131,7 +1122,7 @@ INSERT INTO EvaluationEvent VALUES (
     4, -- ALGE
     NULL, -- B103
     2, -- Written
-    31  -- MT1 ALGE
+    30  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
@@ -1142,7 +1133,7 @@ INSERT INTO EvaluationEvent VALUES (
     4, -- ALGE
     NULL, -- B103
     2, -- Written
-    32  -- MT1 ALGE
+    31  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
@@ -1153,7 +1144,7 @@ INSERT INTO EvaluationEvent VALUES (
     4, -- ALGE
     13, -- B103
     3, -- Written
-    33  -- MT1 ALGE
+    32  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
@@ -1164,7 +1155,7 @@ INSERT INTO EvaluationEvent VALUES (
     5, -- ALGE
     14, -- B103
     3, -- Written
-    34  -- MT1 ALGE
+    33  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
@@ -1175,7 +1166,7 @@ INSERT INTO EvaluationEvent VALUES (
     5, -- ALGE
     7, -- B103
     3, -- Written
-    35  -- MT1 ALGE
+    34  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
@@ -1186,7 +1177,7 @@ INSERT INTO EvaluationEvent VALUES (
     5, -- ALGE
     7, -- B103
     3, -- Written
-    36  -- MT1 ALGE
+    35  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
@@ -1197,7 +1188,7 @@ INSERT INTO EvaluationEvent VALUES (
     5, -- ALGE
     10, -- B103
     3, -- Written
-    37  -- MT1 ALGE
+    36  -- MT1 ALGE
 );
 
 ---------------------------------------------
@@ -1211,7 +1202,7 @@ INSERT INTO EvaluationEvent VALUES (
     6, -- ALGE
     4, -- B103
     3, -- Written
-    38  -- MT1 ALGE
+    37  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
@@ -1222,7 +1213,7 @@ INSERT INTO EvaluationEvent VALUES (
     6, -- ALGE
     7, -- B103
     3, -- Written
-    39  -- MT1 ALGE
+    38  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
@@ -1233,7 +1224,7 @@ INSERT INTO EvaluationEvent VALUES (
     7, -- ALGE
     4, -- B103
     3, -- Written
-    40  -- MT1 ALGE
+    39  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
@@ -1244,11 +1235,22 @@ INSERT INTO EvaluationEvent VALUES (
     7, -- ALGE
     12, -- B103
     3, -- Written
-    41  -- MT1 ALGE
+    40  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
     24,
+    'Exame FIS1',
+    '2021-06-21 08:30:00',
+    '2021-06-21 10:00:00',
+    7, -- ALGE
+    10, -- B103
+    3, -- Written
+    41  -- MT1 ALGE
+);
+
+INSERT INTO EvaluationEvent VALUES (
+    25,
     'Melhoria FIS1',
     '2021-07-21 13:30:00',
     '2021-07-21 15:00:00',
@@ -1259,47 +1261,36 @@ INSERT INTO EvaluationEvent VALUES (
 );
 
 INSERT INTO EvaluationEvent VALUES (
-    25,
+    26,
     'Projeto MEST',
     '2021-03-02 00:00:00',
     '2021-03-16 23:59:59',
     8, -- ALGE
     NULL, -- B103
     2, -- Written
-    46  -- MT1 ALGE
+    43  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
-    26,
+    27,
     'Exame MEST',
     '2021-06-12 11:00:00',
     '2021-06-12 12:30:00',
     8, -- ALGE
     6, -- B103
     2, -- Written
-    46  -- MT1 ALGE
+    44  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
-    27,
-    'Exercícios Assembly',
+    28,
+    'Exercícios Assembly MPCP',
     '2021-04-28 00:00:00',
     '2021-06-10 23:59:59',
     9, -- ALGE
     NULL, -- B103
     2, -- Written
     46  -- MT1 ALGE
-);
-
-INSERT INTO EvaluationEvent VALUES (
-    28,
-    'AD MPCP',
-    '2021-02-22 00:00:00',
-    '2021-07-16 23:59:59',
-    9, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    47  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
@@ -1422,7 +1413,7 @@ INSERT INTO EvaluationEvent VALUES (
     11, -- ALGE
     12, -- B103
     3, -- Written
-    62  -- MT1 ALGE
+    64  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
@@ -1433,7 +1424,7 @@ INSERT INTO EvaluationEvent VALUES (
     11, -- ALGE
     12, -- B103
     2, -- Written
-    59  -- MT1 ALGE
+    61  -- MT1 ALGE
 );
 
 INSERT INTO EvaluationEvent VALUES (
@@ -1524,6 +1515,8 @@ INSERT INTO EvaluationEvent VALUES (
     2, -- Written
     76  -- MT1 ALGE
 );
+--  TODO  Deve ser Evaluation Event?
+-- Se sim, falta eval event para Assiduidade MPCP
 
 INSERT INTO EvaluationEvent VALUES (
     49,
@@ -1539,7 +1532,7 @@ INSERT INTO EvaluationEvent VALUES (
 INSERT INTO EvaluationEvent VALUES (
     50,
     'AAs TC',
-    '2021-10-18 00:00:00',
+    '2021-10-18 00:00:01',
     '2022-03-11 23:59:59',
     15, -- ALGE
     NULL, -- B103
@@ -1550,13 +1543,16 @@ INSERT INTO EvaluationEvent VALUES (
 INSERT INTO EvaluationEvent VALUES (
     51,
     'CAs TC',
-    '2021-10-18 00:00:00',
+    '2021-10-18 00:00:02',
     '2022-03-11 23:59:59',
     15, -- ALGE
     NULL, -- B103
     3, -- Written
     81 -- MT1 ALGE
 );
+
+-- TODO foram todos desviados por 1 segundo para não violar a constraint (sbuject, startDateTime, endDateTime)
+-- Devemos tirar a constraint? ou .....?
 
 -- Periods
 
@@ -1771,12 +1767,14 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     24,
-    '09:00:00',
+    '09:00:01', -- TODO foi adiado em 1s
     '10:30:00',
     'thursday',
     10, -- PROG      
     1 -- EaD
 );
+
+-- TODO Como verificar a sobreposição de aulas no mesmo dia, mas em semestres diferentes?
 
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
@@ -1837,7 +1835,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
 
 INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
     31,
-    '14:00:00',
+    '14:00:01', -- TODO Foi adiado 1s
     '16:00:00',
     'tuesday',
     15, -- TC

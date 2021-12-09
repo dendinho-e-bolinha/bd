@@ -109,7 +109,7 @@ CREATE TABLE EvaluationEvent(
     type REFERENCES EvaluationType NOT NULL,
     grade REFERENCES GradeComponent NOT NULL, -- makes sense sendo 1 para 1?
     CONSTRAINT ValidOccurence CHECK (startDateTime < endDateTime),
-    UNIQUE (startDateTime, endDateTime)
+    UNIQUE (subject, startDateTime, endDateTime)
 );
 
 CREATE TABLE TermSubjects(
