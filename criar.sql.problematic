@@ -88,7 +88,7 @@ CREATE TABLE Period(
     subject REFERENCES Subject ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     classroom REFERENCES Classroom ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     CONSTRAINT ValidOccurence CHECK (startTime < endTime),
-    UNIQUE (startTime, endTime, weekDay)
+    UNIQUE (startTime, endTime, weekDay) --ternaria period subject term, meter term unique, triggers
 );
 
 CREATE TABLE Task(
@@ -109,7 +109,7 @@ CREATE TABLE EvaluationEvent(
     type REFERENCES EvaluationType ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     grade REFERENCES GradeComponent ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     CONSTRAINT ValidOccurence CHECK (startDateTime < endDateTime),
-    UNIQUE (subject, startDateTime, endDateTime)
+    UNIQUE (subject, startDateTime, endDateTime) -- TODO PASSAR PARA TRIGGER
 );
 
 CREATE TABLE TermSubjects(

@@ -1515,7 +1515,7 @@ INSERT INTO EvaluationEvent VALUES (
     2, -- Written
     76  -- MT1 ALGE
 );
---  TODO  Deve ser Evaluation Event?
+--  TODO  Deve ser Evaluation Event? NAO
 -- Se sim, falta eval event para Assiduidade MPCP
 
 INSERT INTO EvaluationEvent VALUES (
