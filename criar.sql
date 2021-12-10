@@ -1,22 +1,23 @@
 PRAGMA foreign_keys=ON;
 BEGIN TRANSACTION;
 
-DROP TABLE IF EXISTS Lecturer;
+DROP TABLE IF EXISTS TermGrades;
 DROP TABLE IF EXISTS TermSubjects;
-DROP TABLE IF EXISTS EvaluationEvent;
+DROP TABLE IF EXISTS Lecturer;
 DROP TABLE IF EXISTS Task;
+DROP TABLE IF EXISTS Professor;
 DROP TABLE IF EXISTS Period;
-DROP TABLE IF EXISTS Subject;
-DROP TABLE IF EXISTS GradeComponent;
-DROP TABLE IF EXISTS EvaluationType;
-DROP TABLE IF EXISTS GradeLimit;
+DROP TABLE IF EXISTS EvaluationEvent;
 DROP TABLE IF EXISTS Classroom;
 DROP TABLE IF EXISTS Institution;
-DROP TABLE IF EXISTS Professor;
+DROP TABLE IF EXISTS EvaluationType;
 DROP TABLE IF EXISTS Term;
+DROP TABLE IF EXISTS Subject;
+DROP TABLE IF EXISTS GradeComponent;
+DROP TABLE IF EXISTS GradeLimit;
 
 CREATE TABLE Term(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     startDate DATE NOT NULL,
     endDate DATE NOT NULL,
@@ -25,102 +26,108 @@ CREATE TABLE Term(
 );
 
 CREATE TABLE Professor(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) UNIQUE,
     phone VARCHAR(31),
     website VARCHAR(255),
-    photo BLOB
+    photo BLOB DEFAULT NULL
 );
 
 CREATE TABLE Institution(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     address VARCHAR(255) UNIQUE,
     email VARCHAR(255) UNIQUE,
     phone VARCHAR(255) UNIQUE,
     website VARCHAR(255),
-    photo BLOB
+    photo BLOB DEFAULT NULL
 );
 
 CREATE TABLE Classroom(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    classroomLocation REFERENCES Institution NOT NULL,
+    classroomLocation REFERENCES Institution ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     UNIQUE (name, classroomLocation)
 );
 
 CREATE TABLE GradeLimit(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     lower REAL NOT NULL,
     upper REAL NOT NULL,
-    UNIQUE (lower, upper),
+    UNIQUE (upper, lower),
     CONSTRAINT ValidRange CHECK (lower < upper)
 );
 
 CREATE TABLE EvaluationType(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     name VARCHAR(15) UNIQUE NOT NULL CONSTRAINT ValidName CHECK (name IN ('written', 'oral', 'practical'))
 );
 
 CREATE TABLE GradeComponent(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    value REAL NOT NULL DEFAULT 0,
-    weight REAL NOT NULL CONSTRAINT ValidWeight CHECK (weight >= 0 AND weight <= 1) DEFAULT 0,
-    gradeLimit REFERENCES GradeLimit NOT NULL,
-    parent REFERENCES GradeComponent
+    value REAL,
+    weight REAL CONSTRAINT ValidWeight CHECK (weight >= 0 AND weight <= 1),
+    gradeLimit REFERENCES GradeLimit ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    parent REFERENCES GradeComponent ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 CREATE TABLE Subject(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     name VARCHAR(255) NOT NULL UNIQUE,
-    color CHAR(6) NOT NULL CONSTRAINT ValidColor CHECK (color >= 0  AND color <= x'FFFFFF'),
-    rootGrade REFERENCES GradeComponent NOT NULL
+    color VARCHAR(6) NOT NULL
 );
 
 CREATE TABLE Period(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     startTime TIME NOT NULL,
     endTime TIME NOT NULL,
     weekDay VARCHAR(31) NOT NULL CONSTRAINT ValidWeekday CHECK (weekday IN ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday')),
     note VARCHAR(1023),
-    subject REFERENCES Subject NOT NULL,
-    classroom REFERENCES Subject NOT NULL,
+    subject REFERENCES Subject ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    term REFERENCES Term ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    classroom REFERENCES Classroom ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     CONSTRAINT ValidOccurence CHECK (startTime < endTime),
-    UNIQUE (startTime, endTime, weekDay, subject)
+    UNIQUE (startTime, endTime, weekDay, term)
 );
 
 CREATE TABLE Task(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description VARCHAR(1023),
     done INTEGER NOT NULL CONSTRAINT IsBoolean CHECK (done IN (0, 1)),
-    subject REFERENCES Subject
+    subject REFERENCES Subject ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE EvaluationEvent(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     startDateTime DATETIME NOT NULL,
     endDateTime DATETIME NOT NULL,
-    subject REFERENCES Subject NOT NULL,
-    classroom REFERENCES Classroom,
-    type REFERENCES EvaluationType NOT NULL,
-    grade REFERENCES GradeComponent NOT NULL, -- makes sense sendo 1 para 1?
-    CONSTRAINT ValidOccurence CHECK (startDateTime < endDateTime),
-    UNIQUE (subject, startDateTime, endDateTime)
+    subject REFERENCES Subject ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    classroom REFERENCES Classroom ON DELETE SET NULL ON UPDATE CASCADE,
+    type REFERENCES EvaluationType ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    grade REFERENCES GradeComponent ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    CONSTRAINT ValidOccurence CHECK (startDateTime < endDateTime)
+);
+
+CREATE TABLE TermGrades(
+    term REFERENCES Term ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    subject REFERENCES Subject ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    grade PRIMARY KEY REFERENCES GradeComponent ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    UNIQUE (term, subject)
 );
 
 CREATE TABLE TermSubjects(
-    term REFERENCES Term NOT NULL,
-    subject REFERENCES Subject NOT NULL,
+    term REFERENCES Term ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    subject REFERENCES Subject ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     PRIMARY KEY (term, subject)
 );
 
 CREATE TABLE Lecturer(
-    period REFERENCES Period NOT NULL,
-    professor REFERENCES Professor NOT NULL,
+    period REFERENCES Period ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    professor REFERENCES Professor ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     PRIMARY KEY (professor, period)
 );
 

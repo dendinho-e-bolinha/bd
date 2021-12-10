@@ -849,36 +849,31 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO Subject VALUES (
     1, 
     'Álgebra', 
-    'EF9F7C', 
-    1
+    'EF9F7C'
 );
 
 INSERT INTO Subject VALUES (
     2, 
     'Análise Matemática', 
-    'D17CEF', 
-    2
+    'D17CEF'
 );
 
 INSERT INTO Subject VALUES (
     3, 
     'Arquitectura e Organização de Computadores', 
-    'E1ED74', 
-    3
+    'E1ED74'
 );
 
 INSERT INTO Subject VALUES (
     4, 
     'Fundamentos da Programação', 
-    '7CE8EF', 
-    4
+    '7CE8EF'
 );
 
 INSERT INTO Subject VALUES (
     5, 
     'Matemática Discreta', 
-    '92ED74', 
-    5
+    '92ED74'
 );
 
 -------------------------------------------------
@@ -886,36 +881,31 @@ INSERT INTO Subject VALUES (
 INSERT INTO Subject VALUES (
     6, 
     'Complementos de Matemática', 
-    'EF9F7C', 
-    6
+    'EF9F7C'
 );
 
 INSERT INTO Subject VALUES (
     7, 
     'Física I', 
-    '7CEFBD', 
-    7
+    '7CEFBD'
 );
 
 INSERT INTO Subject VALUES (
     8, 
     'Métodos Estatísticos', 
-    '92ED74', 
-    8
+    '92ED74'
 );
 
 INSERT INTO Subject VALUES (
     9, 
     'Microprocessadores e Computadores Pessoais', 
-    'E1ED74', 
-    9
+    'E1ED74'
 );
 
 INSERT INTO Subject VALUES (
     10, 
     'Programação', 
-    '7CE8EF', 
-    10
+    '7CE8EF' 
 );
 
 -------------------------------------------------
@@ -923,39 +913,124 @@ INSERT INTO Subject VALUES (
 INSERT INTO Subject VALUES (
     11, 
     'Algoritmos e Estruturas de Dados', 
-    'E1ED74', 
-    11
+    'E1ED74' 
 );
 
 INSERT INTO Subject VALUES (
     12, 
     'Bases de Dados', 
-    '92ED74', 
-    12
+    '92ED74' 
 );
 
 INSERT INTO Subject VALUES (
     13, 
     'Física 2', 
-    'D17CEF', 
-    13
+    'D17CEF'
 );
 
 INSERT INTO Subject VALUES (
     14, 
     'Laboratório de Desenho e Teste de Software', 
-    'EF9F7C', 
-    14
+    'EF9F7C' 
 );
 
 INSERT INTO Subject VALUES (
     15, 
     'Teoria da Computação', 
-    '7CE8EF', 
-    15
+    '7CE8EF' 
 );
 
----------------------------------------------
+-- Term Grades
+
+INSERT INTO TermGrades VALUES(
+    1,
+    1,
+    1
+);
+
+INSERT INTO TermGrades VALUES(
+    1,
+    2,
+    2
+);
+
+INSERT INTO TermGrades VALUES(
+    1,
+    3,
+    3
+);
+
+INSERT INTO TermGrades VALUES(
+    1,
+    4,
+    4
+);
+
+INSERT INTO TermGrades VALUES(
+    1,
+    5,
+    5
+);
+
+INSERT INTO TermGrades VALUES(
+    2,
+    6,
+    6
+);
+
+INSERT INTO TermGrades VALUES(
+    2,
+    7,
+    7
+);
+
+INSERT INTO TermGrades VALUES(
+    2,
+    8,
+    8
+);
+
+INSERT INTO TermGrades VALUES(
+    2,
+    9,
+    9
+);
+
+INSERT INTO TermGrades VALUES(
+    2,
+    10,
+    10
+);
+
+INSERT INTO TermGrades VALUES(
+    3,
+    11,
+    11
+);
+
+INSERT INTO TermGrades VALUES(
+    3,
+    12,
+    12
+);
+
+INSERT INTO TermGrades VALUES(
+    3,
+    13,
+    13
+);
+
+INSERT INTO TermGrades VALUES(
+    3,
+    14,
+    14
+);
+
+INSERT INTO TermGrades VALUES(
+    3,
+    15,
+    15
+);
 
 -- Term Subjects
 
@@ -1507,19 +1582,6 @@ INSERT INTO EvaluationEvent VALUES (
 
 INSERT INTO EvaluationEvent VALUES (
     48,
-    'Participação LDTS',
-    '2021-10-18 00:00:00',
-    '2022-03-11 23:59:59',
-    14, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    76  -- MT1 ALGE
-);
---  TODO  Deve ser Evaluation Event? NAO
--- Se sim, falta eval event para Assiduidade MPCP
-
-INSERT INTO EvaluationEvent VALUES (
-    49,
     'PAs TC',
     '2021-10-18 00:00:00',
     '2022-03-11 23:59:59',
@@ -1530,9 +1592,9 @@ INSERT INTO EvaluationEvent VALUES (
 );
 
 INSERT INTO EvaluationEvent VALUES (
-    50,
+    49,
     'AAs TC',
-    '2021-10-18 00:00:01',
+    '2021-10-18 00:00:00',
     '2022-03-11 23:59:59',
     15, -- ALGE
     NULL, -- B103
@@ -1541,9 +1603,9 @@ INSERT INTO EvaluationEvent VALUES (
 );
 
 INSERT INTO EvaluationEvent VALUES (
-    51,
+    50,
     'CAs TC',
-    '2021-10-18 00:00:02',
+    '2021-10-18 00:00:00',
     '2022-03-11 23:59:59',
     15, -- ALGE
     NULL, -- B103
@@ -1551,366 +1613,402 @@ INSERT INTO EvaluationEvent VALUES (
     81 -- MT1 ALGE
 );
 
--- TODO foram todos desviados por 1 segundo para não violar a constraint (sbuject, startDateTime, endDateTime)
--- Devemos tirar a constraint? ou .....?
-
 -- Periods
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     1,
     '09:00:00',
     '10:30:00',
     'monday',
     3, -- AOCO
+    1,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     2,
     '10:30:00',
     '12:00:00',
     'monday',
     5, -- MDIS
+    1,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     3,
     '12:00:00',
     '13:30:00',
     'monday',
     4, -- FPRO
+    1,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     4,
     '08:30:00',
     '10:30:00',
     'tuesday',
     1, -- ALGE
+    1,
     4 -- B013
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     5,
     '10:30:00',
     '12:30:00',
     'tuesday',
     4, -- FPRO
+    1,
     10 -- B208
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     6,
     '14:00:00',
     '16:00:00',
     'tuesday',
     3, -- AOCO
+    1,
     3 -- B011
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     7,
     '08:30:00',
     '10:00:00',
     'wednesday',
     5, -- MDIS
+    1,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     8,
     '10:00:00',
     '11:30:00',
     'wednesday',
     2, -- AMAT
+    1,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject,term, classroom) VALUES (
     9,
     '11:30:00',
     '13:30:00',
     'wednesday',
     1, -- ALGE
+    1,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     10,
     '09:00:00',
     '10:30:00',
     'thursday',
     2, -- AMAT
+    1,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     11,
     '10:30:00',
     '12:00:00',
     'thursday',
     4, -- FPRO
+    1,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     12,
     '12:00:00',
     '13:30:00',
     'thursday',
     3, -- AOCO
+    1,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     13,
     '09:00:00',
     '11:00:00',
     'friday',
     5, -- MDIS
+    1,
     2 -- B005
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     14,
     '11:00:00',
     '13:00:00',
     'friday',
     2, -- AMAT
+    1,
     2 -- B005
 );
 
 -------------------------------------------------
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     15,
     '09:00:00',
     '10:00:00',
     'monday',
     6, -- CMAT
+    2,
     1 --EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     16,
     '10:00:00',
     '11:00:00',
     'monday',
     7, -- FISI1
+    2,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     17,
     '11:00:00',
     '12:30:00',
     'monday',
     10, -- PROG
+    2,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     18,
     '09:00:00',
     '11:00:00',
     'tuesday',
     7, -- FISI1
+    2,
     5 -- B014
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     19,
     '11:00:00',
     '13:00:00',
     'tuesday',
     6, -- CMAT
+    2,
     5 -- B014
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     20,
     '09:00:00',
     '10:00:00',
     'wednesday',
     7, -- FISI1
+    2,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     21,
     '10:00:00',
     '11:00:00',
     'wednesday',
     6, -- CMAT
+    2,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     22,
     '11:00:00',
     '13:00:00',
     'wednesday',
     8, -- MEST
+    2,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     23,
     '17:30:00',
     '19:30:00',
     'wednesday',
     10, -- PROG
+    2,
     9 -- B201
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     24,
     '09:00:01', -- TODO foi adiado em 1s
     '10:30:00',
     'thursday',
-    10, -- PROG      
+    10, -- PROG  
+    2,    
     1 -- EaD
 );
 
 -- TODO Como verificar a sobreposição de aulas no mesmo dia, mas em semestres diferentes?
 
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     25,
     '10:30:00',
     '12:30:00', 
     'thursday',  
     9, -- MPCP
+    2,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     26,
     '13:30:00',
     '15:30:00', 
     'friday',  
     9, -- MPCP
+    2,
     9 -- B201
 ); 
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     27,
     '15:30:00',
     '17:30:00',
     'friday', 
     8, -- MEST 
+    2,
     6 -- B017
 );
 
 -------------------------------------------------
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     28,
     '14:00:00',
     '15:00:00',
     'monday',
     11, -- AED
+    3,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     29,
     '15:00:00',
     '16:00:00',
     'monday',
     12, -- BD
+    3,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     30,
     '16:00:00',
     '17:30:00',
     'monday',
     13, -- F.II
+    3,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     31,
     '14:00:01', -- TODO Foi adiado 1s
     '16:00:00',
     'tuesday',
     15, -- TC
+    3,
     8  -- B110
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     32,
     '16:00:00',
     '18:00:00',
     'tuesday',
     14, -- LDTS
+    3,
     12 -- B304
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     33,
     '09:00:00',
     '11:00:00',
     'wednesday',
     11, -- AED
+    3,
     13 -- B308
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     34,
     '11:00:00',
     '12:30:00',
     'wednesday',
     13, -- F.II
+    3,
     14 -- B323
 ); 
   
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     35,
     '14:00:00',
     '16:00:00',
     'thursday',
     14, -- LDTS
+    3,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     36,
     '16:00:00',
     '18:00:00',
     'thursday',
     15, -- TC
+    3,
     1  --EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     37,
     '18:00:00',
     '19:00:00',
     'thursday',
     11, -- AED
+    3,
     1  -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     38,
     '19:00:00',
     '20:00:00',
     'thursday',
     12, -- BD
+    3,
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
     39,
     '14:00:00',
     '16:00:00',
     'friday',
     12, -- BD
+    3,
     7 -- B103
 );
 
