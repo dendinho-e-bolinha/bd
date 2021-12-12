@@ -704,7 +704,7 @@ INSERT INTO GradeComponent VALUES (
     67,
     'Entrega 2 BD',
     NULL,
-    0.5,
+    0.25,
     1,
     65
 );
@@ -713,7 +713,7 @@ INSERT INTO GradeComponent VALUES (
     68,
     'Entrega 3 BD',
     NULL,
-    0.25,
+    0.5,
     1,
     65
 );
