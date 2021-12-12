@@ -31,7 +31,7 @@ CREATE TABLE Professor(
     email VARCHAR(255) UNIQUE,
     phone VARCHAR(31),
     website VARCHAR(255),
-    photo BLOB DEFAULT NULL
+    photo VARCHAR(255) DEFAULT NULL
 );
 
 CREATE TABLE Institution(
@@ -41,7 +41,7 @@ CREATE TABLE Institution(
     email VARCHAR(255) UNIQUE,
     phone VARCHAR(255) UNIQUE,
     website VARCHAR(255),
-    photo BLOB DEFAULT NULL
+    photo VARCHAR(255) DEFAULT NULL
 );
 
 CREATE TABLE Classroom(
