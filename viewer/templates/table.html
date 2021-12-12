@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ query }}
+{% endblock title %} 
+{% block body %}
+    <h1>{{query}}</h1>
+    <table>
+        {{ res | safe }}
+    </table>
+{% endblock body %}
