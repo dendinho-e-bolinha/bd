@@ -213,19 +213,19 @@ INSERT INTO EvaluationType VALUES (3, 'written');
 
 -- Subjects and Grade Components
 
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (1, 'Avaliação de ALGE', 1);
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (2, 'Avaliação de AMAT', 1);
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (3, 'Avaliação de AOCO', 1);
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (4, 'Avaliação de FPRO', 1);
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (5, 'Avaliação de MDIS', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (1, 'Avaliação de ALGE', 1, 18, 1);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (2, 'Avaliação de AMAT', 1, 20, 1);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (3, 'Avaliação de AOCO', 1, 19, 1);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (4, 'Avaliação de FPRO', 1, 20, 1);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (5, 'Avaliação de MDIS', 1, 18, 1);
 
 -------------------------------------------------
 
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (6, 'Avaliação de CMAT', 1);
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (7, 'Avaliação de FISI1', 1);
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (8, 'Avaliação de MEST', 1);
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (9, 'Avaliação de MPCP', 1);
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (10, 'Avaliação de PROG', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (6, 'Avaliação de CMAT', 1, 20, 1);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (7, 'Avaliação de FISI1', 1, 16,1);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (8, 'Avaliação de MEST', 1, 18, 1);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (9, 'Avaliação de MPCP', 1, 20, 1);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (10, 'Avaliação de PROG', 1, 20, 1);
 
 -------------------------------------------------
 
@@ -604,7 +604,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     56,
     'Trabalhos de Grupo AED',
-    0,
+    NULL,
     0.4,
     1,
     11
@@ -613,7 +613,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     57,
     'Trabalho 1 AED',
-    0,
+    NULL,
     0.5,
     1,
     56
@@ -622,7 +622,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     58,
     'Trabalho 2 AED',
-    0,
+    NULL,
     0.5,
     1,
     56
@@ -631,7 +631,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     59,
     'MTs Práticos AED',
-    0,
+    NULL,
     0.3,
     1,
     11
@@ -640,7 +640,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     60,
     'MTP1 AED',
-    0,
+    NULL,
     0.5,
     1,
     59
@@ -649,7 +649,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     61,
     'MTP2 AED',
-    0,
+    NULL,
     0.5,
     1,
     59
@@ -658,7 +658,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     62,
     'MT Teóricos AED',
-    0,
+    NULL,
     0.3,
     1,
     11
@@ -667,7 +667,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     63,
     'MTT1 AED',
-    0,
+    NULL,
     0.5,
     1,
     62
@@ -676,16 +676,16 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     64,
     'MTT2 AED',
-    0,
+    NULL,
     0.5,
     1,
-    63
+    62
 );
 
 INSERT INTO GradeComponent VALUES (
     65,
     'Projeto BD',
-    0,
+    NULL,
     0.35,
     1,
     12
@@ -703,7 +703,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     67,
     'Entrega 2 BD',
-    0,
+    NULL,
     0.5,
     1,
     65
@@ -712,7 +712,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     68,
     'Entrega 3 BD',
-    0,
+    NULL,
     0.25,
     1,
     65
@@ -721,7 +721,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     69,
     'Exame BD',
-    0,
+    NULL,
     0.65,
     1,
     12
@@ -730,7 +730,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     70,
     'MT FIS2',
-    0,
+    NULL,
     0.4,
     1,
     13
@@ -739,7 +739,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     71,
     'Exame FIS2',
-    0,
+    NULL,
     0.6,
     1,
     13
@@ -748,7 +748,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     72,
     'Projeto LDTS',
-    0,
+    NULL,
     0.6,
     1,
     14
@@ -757,7 +757,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     73,
     'Entrega 1 LDTS',
-    0,
+    NULL,
     0.1,
     1,
     72
@@ -766,7 +766,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     74,
     'Entrega 2 LDTS',
-    0,
+    NULL,
     0.6,
     1,
     72
@@ -775,7 +775,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     75,
     'Entrega 3 LDTS',
-    0,
+    NULL,
     0.3,
     1,
     72
@@ -784,7 +784,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     76,
     'Participação LDTS',
-    0,
+    NULL,
     0.1,
     1,
     14
@@ -793,7 +793,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     77,
     'Teste LDTS',
-    0,
+    NULL,
     0.3,
     1,
     14
@@ -802,7 +802,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     78,
     'AD TC',
-    0,
+    NULL,
     0.25,
     1,
     15
@@ -811,7 +811,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     79,
     'PAs TC',
-    0,
+    NULL,
     0.1,
     1,
     78
@@ -820,7 +820,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     80,
     'AAs TC',
-    0,
+    NULL,
     0.6,
     1,
     78
@@ -829,7 +829,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     81,
     'CAs TC',
-    0,
+    NULL,
     0.3,
     1,
     78
@@ -838,7 +838,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     82,
     'Exame TC',
-    0,
+    NULL,
     0.75,
     1,
     15
@@ -1031,12 +1031,6 @@ INSERT INTO TermGrades VALUES(
     15,
     15
 );
-
--- Term Subjects
-
-INSERT INTO TermSubjects VALUES (1, 1), (1, 2), (1, 3), (1, 4), (1, 5); -- 1S 2020/2021
-INSERT INTO TermSubjects VALUES (2, 6), (2, 7), (2, 8), (2, 9), (2, 10); -- 2S 2020/2021
-INSERT INTO TermSubjects VALUES (3, 11), (3, 12), (3, 13), (3, 14), (3, 15); -- 1S 2021/2022
 
 -- Classrooms
 
@@ -1615,7 +1609,7 @@ INSERT INTO EvaluationEvent VALUES (
 
 -- Periods
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     1,
     '09:00:00',
     '10:30:00',
@@ -1625,7 +1619,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     2,
     '10:30:00',
     '12:00:00',
@@ -1635,7 +1629,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     3,
     '12:00:00',
     '13:30:00',
@@ -1645,7 +1639,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     4,
     '08:30:00',
     '10:30:00',
@@ -1655,7 +1649,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     4 -- B013
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     5,
     '10:30:00',
     '12:30:00',
@@ -1665,7 +1659,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     10 -- B208
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     6,
     '14:00:00',
     '16:00:00',
@@ -1675,7 +1669,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     3 -- B011
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     7,
     '08:30:00',
     '10:00:00',
@@ -1685,7 +1679,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     8,
     '10:00:00',
     '11:30:00',
@@ -1695,7 +1689,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject,term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject,term, classroom) VALUES (
     9,
     '11:30:00',
     '13:30:00',
@@ -1705,7 +1699,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject,term, classroom) VAL
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     10,
     '09:00:00',
     '10:30:00',
@@ -1715,7 +1709,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     11,
     '10:30:00',
     '12:00:00',
@@ -1725,7 +1719,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     12,
     '12:00:00',
     '13:30:00',
@@ -1735,7 +1729,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     13,
     '09:00:00',
     '11:00:00',
@@ -1745,7 +1739,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     2 -- B005
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     14,
     '11:00:00',
     '13:00:00',
@@ -1757,7 +1751,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
 
 -------------------------------------------------
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     15,
     '09:00:00',
     '10:00:00',
@@ -1767,7 +1761,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 --EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     16,
     '10:00:00',
     '11:00:00',
@@ -1777,7 +1771,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     17,
     '11:00:00',
     '12:30:00',
@@ -1787,7 +1781,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     18,
     '09:00:00',
     '11:00:00',
@@ -1797,7 +1791,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     5 -- B014
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     19,
     '11:00:00',
     '13:00:00',
@@ -1807,7 +1801,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     5 -- B014
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     20,
     '09:00:00',
     '10:00:00',
@@ -1817,7 +1811,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     21,
     '10:00:00',
     '11:00:00',
@@ -1827,7 +1821,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     22,
     '11:00:00',
     '13:00:00',
@@ -1837,7 +1831,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     23,
     '17:30:00',
     '19:30:00',
@@ -1847,7 +1841,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     9 -- B201
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     24,
     '09:00:01', -- TODO foi adiado em 1s
     '10:30:00',
@@ -1860,7 +1854,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
 -- TODO Como verificar a sobreposição de aulas no mesmo dia, mas em semestres diferentes?
 
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     25,
     '10:30:00',
     '12:30:00', 
@@ -1870,7 +1864,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     26,
     '13:30:00',
     '15:30:00', 
@@ -1880,7 +1874,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     9 -- B201
 ); 
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     27,
     '15:30:00',
     '17:30:00',
@@ -1892,7 +1886,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
 
 -------------------------------------------------
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     28,
     '14:00:00',
     '15:00:00',
@@ -1902,7 +1896,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     29,
     '15:00:00',
     '16:00:00',
@@ -1912,7 +1906,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     30,
     '16:00:00',
     '17:30:00',
@@ -1922,7 +1916,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     31,
     '14:00:01', -- TODO Foi adiado 1s
     '16:00:00',
@@ -1932,7 +1926,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     8  -- B110
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     32,
     '16:00:00',
     '18:00:00',
@@ -1942,7 +1936,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     12 -- B304
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     33,
     '09:00:00',
     '11:00:00',
@@ -1952,7 +1946,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     13 -- B308
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     34,
     '11:00:00',
     '12:30:00',
@@ -1962,7 +1956,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     14 -- B323
 ); 
   
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     35,
     '14:00:00',
     '16:00:00',
@@ -1972,7 +1966,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     36,
     '16:00:00',
     '18:00:00',
@@ -1982,7 +1976,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1  --EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     37,
     '18:00:00',
     '19:00:00',
@@ -1992,7 +1986,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1  -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     38,
     '19:00:00',
     '20:00:00',
@@ -2002,7 +1996,7 @@ INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VA
     1 -- EaD
 );
 
-INSERT INTO Period(id, startTime, endTime, weekDay, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     39,
     '14:00:00',
     '16:00:00',

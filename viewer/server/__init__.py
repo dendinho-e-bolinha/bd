@@ -14,6 +14,6 @@ def home():
     result = database.get_html_from_query(query)
 
     if result is None:
-        return None
+        return "<strong>CRITICAL ERROR</strong><br>" + query
 
     return render_template('table.html' if result[0] else 'error.html', query=query, res=result[1])

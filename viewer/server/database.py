@@ -36,5 +36,8 @@ def get_html_from_query(query: str) -> Tuple[bool, str] | None:
         elif out is not None and err is None:
             return (True, bytes_to_str(out))
 
+        elif out is not None and err is not None:
+            return (False, bytes_to_str(err))
+
         else:
             return None

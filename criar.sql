@@ -18,7 +18,7 @@ DROP TABLE IF EXISTS GradeLimit;
 
 CREATE TABLE Term(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    name VARCHAR(255) UNIQUE NOT NULL,
     startDate DATE NOT NULL,
     endDate DATE NOT NULL,
     CONSTRAINT ValidOccurence CHECK (startDate < endDate),
@@ -31,23 +31,23 @@ CREATE TABLE Professor(
     email VARCHAR(255) UNIQUE,
     phone VARCHAR(31),
     website VARCHAR(255),
-    photo VARCHAR(255) DEFAULT NULL
+    photo VARCHAR(255)
 );
 
 CREATE TABLE Institution(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    name VARCHAR(255) UNIQUE NOT NULL,
     address VARCHAR(255) UNIQUE,
     email VARCHAR(255) UNIQUE,
     phone VARCHAR(255) UNIQUE,
     website VARCHAR(255),
-    photo VARCHAR(255) DEFAULT NULL
+    photo VARCHAR(255)
 );
 
 CREATE TABLE Classroom(
     id INTEGER PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    classroomLocation REFERENCES Institution ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    classroomLocation REFERENCES Institution ON DELETE CASCADE ON UPDATE CASCADE NOT NULL,
     UNIQUE (name, classroomLocation)
 );
 
@@ -55,7 +55,7 @@ CREATE TABLE GradeLimit(
     id INTEGER PRIMARY KEY,
     lower REAL NOT NULL,
     upper REAL NOT NULL,
-    UNIQUE (upper, lower),
+    UNIQUE (lower, upper),
     CONSTRAINT ValidRange CHECK (lower < upper)
 );
 
@@ -70,12 +70,12 @@ CREATE TABLE GradeComponent(
     value REAL,
     weight REAL CONSTRAINT ValidWeight CHECK (weight >= 0 AND weight <= 1),
     gradeLimit REFERENCES GradeLimit ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
-    parent REFERENCES GradeComponent ON DELETE SET NULL ON UPDATE CASCADE
+    parent REFERENCES GradeComponent ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Subject(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255) NOT NULL UNIQUE,
+    name VARCHAR(255) UNIQUE NOT NULL,
     color VARCHAR(6) NOT NULL
 );
 
@@ -83,13 +83,13 @@ CREATE TABLE Period(
     id INTEGER PRIMARY KEY,
     startTime TIME NOT NULL,
     endTime TIME NOT NULL,
-    weekDay VARCHAR(31) NOT NULL CONSTRAINT ValidWeekday CHECK (weekday IN ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday')),
+    weekday VARCHAR(31) NOT NULL CONSTRAINT ValidWeekday CHECK (weekday IN ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday')),
     note VARCHAR(1023),
     subject REFERENCES Subject ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     term REFERENCES Term ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     classroom REFERENCES Classroom ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     CONSTRAINT ValidOccurence CHECK (startTime < endTime),
-    UNIQUE (startTime, endTime, weekDay, term)
+    UNIQUE (startTime, endTime, weekday, term)
 );
 
 CREATE TABLE Task(
@@ -105,10 +105,10 @@ CREATE TABLE EvaluationEvent(
     name VARCHAR(255) NOT NULL,
     startDateTime DATETIME NOT NULL,
     endDateTime DATETIME NOT NULL,
-    subject REFERENCES Subject ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    subject REFERENCES Subject ON DELETE CASCADE ON UPDATE CASCADE NOT NULL,
     classroom REFERENCES Classroom ON DELETE SET NULL ON UPDATE CASCADE,
     type REFERENCES EvaluationType ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
-    grade REFERENCES GradeComponent ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
+    grade REFERENCES GradeComponent ON DELETE CASCADE ON UPDATE CASCADE NOT NULL,
     CONSTRAINT ValidOccurence CHECK (startDateTime < endDateTime)
 );
 
@@ -117,12 +117,6 @@ CREATE TABLE TermGrades(
     subject REFERENCES Subject ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     grade PRIMARY KEY REFERENCES GradeComponent ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     UNIQUE (term, subject)
-);
-
-CREATE TABLE TermSubjects(
-    term REFERENCES Term ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
-    subject REFERENCES Subject ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
-    PRIMARY KEY (term, subject)
 );
 
 CREATE TABLE Lecturer(
