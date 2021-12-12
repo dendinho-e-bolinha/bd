@@ -108,7 +108,6 @@ CREATE TABLE Task(
 
 CREATE TABLE EvaluationEvent(
     id              INTEGER         PRIMARY KEY,
-    name            VARCHAR(255)    NOT NULL,
     startDateTime   DATETIME        NOT NULL,
     endDateTime     DATETIME        NOT NULL,
 

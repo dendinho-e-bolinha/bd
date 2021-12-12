@@ -20,61 +20,61 @@ INSERT INTO Institution(id, name, address, email, phone, website) VALUES (
 
 -- Professors
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- ALGE
+INSERT INTO Professor(id, name, email, phone) VALUES (
     1,
     'António Joaquim Mendes Ferreira',
     'ferreira@fe.up.pt',
     '+351 22 508 3462'
 );
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- AMAT
+INSERT INTO Professor(id, name, email, phone) VALUES (
     2,
     'Alexandre Miguel Prior Afonso',
     'aafonso@fe.up.pt',
     '+351 22 508 1365'
 );
 
-INSERT INTO Professor(id, name, email) VALUES (  -- AMAT
+INSERT INTO Professor(id, name, email) VALUES (
     3,
     'Luís Jorge Lima Ferras',
     'lferras@fe.up.pt'
 );
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- AOCO
+INSERT INTO Professor(id, name, email, phone) VALUES (
     4,
     'António José Duarte Araújo',
     'aja@fe.up.pt',
     '+351 22 508 3305'
 );
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- AOCO
+INSERT INTO Professor(id, name, email, phone) VALUES (
     5,
     'João Paulo de Castro Canas Ferreira',
     'jcf@fe.up.pt',
     '+351 22 508 3367'
 );
 
-INSERT INTO Professor(id, name, email) VALUES (  -- FPRO
+INSERT INTO Professor(id, name, email) VALUES (
     6,
     'Afonso Manuel Maia Lopes Salgado de Sousa',
     'ammiss@fe.up.pt'
 );
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- FPRO
+INSERT INTO Professor(id, name, email, phone) VALUES (
     7,
     'João António Correia Lopes',
     'jlopes@fe.up.pt',
     '+351 22 508 3375'
 );
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- MDIS
+INSERT INTO Professor(id, name, email, phone) VALUES (
     8,
     'Gabriel de Sousa Torcato David',
     'gtd@fe.up.pt',
     '+351 22 508 3224'
 );
 
-INSERT INTO Professor(id, name, email) VALUES (  -- MDIS
+INSERT INTO Professor(id, name, email) VALUES (
     9,
     'Renato Borges Araujo Moura Soeiro',
     'rsoeiro@fe.up.pt'
@@ -82,21 +82,21 @@ INSERT INTO Professor(id, name, email) VALUES (  -- MDIS
 
 ------------------------------------------------------ 
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- CMAT
+INSERT INTO Professor(id, name, email, phone) VALUES (
     10,
     'Ana Maria Azevedo Neves',
     'ananeves@fe.up.pt',
     '+351 22 508 2206'
 );
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- CMAT
+INSERT INTO Professor(id, name, email, phone) VALUES (
     11,
     'José Augusto Trigo Barbosa',
     'jtrigo@fe.up.pt',
     '+351 22 508 3461'
 );
 
-INSERT INTO Professor(id, name, email, phone, website) VALUES (  -- FIS.1
+INSERT INTO Professor(id, name, email, phone, website) VALUES (
     12, 
     'Jaime Enrique Villate Matiz', 
     'villate@fe.up.pt', 
@@ -104,40 +104,40 @@ INSERT INTO Professor(id, name, email, phone, website) VALUES (  -- FIS.1
     'https://villate.org/'
 );
 
-INSERT INTO Professor(id, name, email) VALUES (  -- FIS.1
+INSERT INTO Professor(id, name, email) VALUES (
     13,
     'Mercedes Esteves Filho',
     'mfilho@fe.up.pt'
 );
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- MEST
+INSERT INTO Professor(id, name, email, phone) VALUES (
     14,
     'António Miguel da Fonseca Fernandes Gomes',
     'agomes@fe.up.pt',
     '+351 22 508 1573'
 );
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- MEST
+INSERT INTO Professor(id, name, email, phone) VALUES (
     15,
     'João Pedro Carvalho Leal Mendes Moreira',
     'jmoreira@fe.up.pt',
     '+351 22 508 1573'
 );
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- MEST
+INSERT INTO Professor(id, name, email, phone) VALUES (
     16,
     'Maria Alexandra Ramalho de Oliveira',
     'maoliveira@fe.up.pt',
     '+351 225083438'
 );
 
-INSERT INTO Professor(id, name, email) VALUES (  -- PROG
+INSERT INTO Professor(id, name, email) VALUES (
     17,
     'João Paulo Fernandes',
     'jpaulo@fe.up.pt'
 );
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- PROG
+INSERT INTO Professor(id, name, email, phone) VALUES (
     18,
     'Jorge Alves da Silva',
     'jsilva@fe.up.pt',
@@ -146,54 +146,54 @@ INSERT INTO Professor(id, name, email, phone) VALUES (  -- PROG
 
 ------------------------------------------------------
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- AED
+INSERT INTO Professor(id, name, email, phone) VALUES (
     19, 
     'Ana Paula Cunha da Rocha', 
     'arocha@fe.up.pt', 
     '+351 22 508 3322'
 );
 
-INSERT INTO Professor(id, name, email) VALUES (  -- AED
+INSERT INTO Professor(id, name, email) VALUES (
     20, 
     'Pedro Manuel Pinto Ribeiro', 
     'pribeiro@fc.up.pt'
 );
 
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- BD
+INSERT INTO Professor(id, name, email, phone) VALUES (
     21,
     'Carla Alexandra Teixeira Lopes',
     'ctl@fe.up.pt',
     '+351 22 508 3246'
 );
     
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- BD
+INSERT INTO Professor(id, name, email, phone) VALUES (
     22, 
     'Michel Celestino Paiva Ferreira', 
     'mpferrei@fc.up.pt', 
     '+351 933 848 797'
 );
 
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- LDTS
+INSERT INTO Professor(id, name, email, phone) VALUES (
     23, 
     'André Monteiro de Oliveira Restivo', 
     'arestivo@fe.up.pt', 
     '+351 22 508 3321'
 );
 
-INSERT INTO Professor(id, name, email) VALUES (  -- LDTS
+INSERT INTO Professor(id, name, email) VALUES (
     24, 
     'Rui Filipe Lima Maranhão de Abreu', 
     'rma@fe.up.pt'
 );
 
-INSERT INTO Professor(id, name, email) VALUES (  -- TC
+INSERT INTO Professor(id, name, email) VALUES (
     25, 
     'João Carlos Viegas Martins Bispo', 
     'jbispo@fe.up.pt'
 );
     
-INSERT INTO Professor(id, name, email, phone) VALUES (  -- TC
+INSERT INTO Professor(id, name, email, phone) VALUES (
     26, 
     'João Manuel Paiva Cardoso', 
     'jmpc@fe.up.pt', 
@@ -1053,211 +1053,192 @@ INSERT INTO Classroom VALUES (14, "B323", 1);
 
 INSERT INTO EvaluationEvent VALUES (
     1,
-    'MT1 ALGE',
     '2020-12-12 08:30:00',
     '2020-12-12 10:00:00',
-    1, -- ALGE
-    7, -- B103
-    3, -- Written
-    16  -- MT1 ALGE
+    1,
+    7,
+    3,
+    16
 );
 
 INSERT INTO EvaluationEvent VALUES (
     2,
-    'MT2 ALGE',
     '2021-02-01 08:30:00',
     '2021-02-01 10:00:00',
-    1, -- ALGE
-    14, -- B323
-    3, -- Written
-    17  -- MT2 ALGE
+    1,
+    14,
+    3,
+    17
 );
 
 INSERT INTO EvaluationEvent VALUES (
     3,
-    'MT1 AMAT',
     '2020-12-09 08:30:00',
     '2020-12-09 10:00:00',
-    2, -- AMAT
-    7, -- B103
-    3, -- Written
-    18  -- MT1 AMAT
+    2,
+    7,
+    3,
+    18
 );
 
 INSERT INTO EvaluationEvent VALUES (
     4,
-    'MT2 AMAT',
     '2021-01-27 08:30:00',
     '2021-01-27 10:00:00',
-    2, -- AMAT
-    12, -- B103
-    3, -- Written
+    2,
+    12,
+    3,
     19 
 );
 
 INSERT INTO EvaluationEvent VALUES (
     5,
-    'MT1 AOCO',
     '2020-12-05 08:30:00',
     '2020-12-05 10:00:00',
-    3, -- AOCO
-    11, -- B103
-    3, -- Written
+    3,
+    11,
+    3,
     20 
 );
 
 INSERT INTO EvaluationEvent VALUES (
     6,
-    'MT2 AOCO',
     '2021-01-23 10:00:00',
     '2021-01-23 12:30:00',
-    3, -- AOCO
-    2, -- B103
-    3, -- Written
+    3,
+    2,
+    3,
     21
 );
 
 INSERT INTO EvaluationEvent VALUES (
     7,
-    'Melhoria AOCO',
     '2021-09-13 14:30:00',
     '2021-09-13 16:00:00',
-    3, -- ALGE
-    7, -- B103
-    3, -- Written
-    22  -- MT1 ALGE
+    3,
+    7,
+    3,
+    22
 );
 
 INSERT INTO EvaluationEvent VALUES (
     8,
-    'PE1 FPRO',
     '2020-11-07 08:30:00',
     '2020-11-07 10:00:00',
-    4, -- ALGE
-    12, -- B103
-    3, -- Written
-    24  -- MT1 ALGE
+    4,
+    12,
+    3,
+    24
 );
 
 INSERT INTO EvaluationEvent VALUES (
     9,
-    'PE2 FPRO',
     '2020-12-02 08:30:00',
     '2020-12-02 10:00:00',
-    4, -- ALGE
-    7, -- B103
-    3, -- Written
-    25  -- MT1 ALGE
+    4,
+    7,
+    3,
+    25
 );
 
 INSERT INTO EvaluationEvent VALUES (
     10,
-    'PE3 FPRO',
     '2021-01-09 08:30:00',
     '2021-01-09 10:00:00',
-    4, -- ALGE
-    7, -- B103
-    3, -- Written
-    26  -- MT1 ALGE
+    4,
+    7,
+    3,
+    26
 );
 
 INSERT INTO EvaluationEvent VALUES (
     11,
-    'PE4 FPRO',
     '2021-01-29 08:30:00',
     '2021-01-29 10:00:00',
-    4, -- ALGE
-    7, -- B103
-    3, -- Written
-    27  -- MT1 ALGE
+    4,
+    7,
+    3,
+    27
 );
 
 INSERT INTO EvaluationEvent VALUES (
     12,
-    'LEs FPRO',
     '2020-10-12 13:20:00',
     '2021-01-21 12:00:00',
-    4, -- ALGE
-    1, -- B103
-    3, -- Written
-    29 -- MT1 ALGE
+    4,
+    1,
+    3,
+    29
 );
 
 INSERT INTO EvaluationEvent VALUES (
     13,
-    'REs FPRO',
     '2020-10-19 08:00:00',
     '2021-01-25 08:00:00',
-    4, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    30  -- MT1 ALGE
+    4,
+    NULL,
+    2,
+    30
 );
 
 INSERT INTO EvaluationEvent VALUES (
     14,
-    'Projeto FPRO',
     '2020-12-04 00:00:00',
     '2021-01-25 23:59:59',
-    4, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    31  -- MT1 ALGE
+    4,
+    NULL,
+    2,
+    31
 );
 
 INSERT INTO EvaluationEvent VALUES (
     15,
-    'TE1 FPRO',
     '2021-02-03 08:30:00',
     '2021-02-03 10:00:00',
-    4, -- ALGE
-    13, -- B103
-    3, -- Written
-    32  -- MT1 ALGE
+    4,
+    13,
+    3,
+    32
 );
 
 INSERT INTO EvaluationEvent VALUES (
     16,
-    'MT1 MDIS',
     '2020-10-31 11:30:00',
     '2020-10-31 13:00:00',
-    5, -- ALGE
-    14, -- B103
-    3, -- Written
-    33  -- MT1 ALGE
+    5,
+    14,
+    3,
+    33
 );
 
 INSERT INTO EvaluationEvent VALUES (
     17,
-    'MT2 MDIS',
     '2020-11-28 11:30:00',
     '2020-11-28 13:00:00',
-    5, -- ALGE
-    7, -- B103
-    3, -- Written
-    34  -- MT1 ALGE
+    5,
+    7,
+    3,
+    34
 );
 
 INSERT INTO EvaluationEvent VALUES (
     18,
-    'MT3 MDIS',
     '2020-12-19 09:00:00',
     '2020-12-19 10:30:00',
-    5, -- ALGE
-    7, -- B103
-    3, -- Written
-    35  -- MT1 ALGE
+    5,
+    7,
+    3,
+    35
 );
 
 INSERT INTO EvaluationEvent VALUES (
     19,
-    'MT4 MDIS',
     '2021-01-25 08:30:00',
     '2021-01-25 10:00:00',
-    5, -- ALGE
-    10, -- B103
-    3, -- Written
-    36  -- MT1 ALGE
+    5,
+    10,
+    3,
+    36
 );
 
 ---------------------------------------------
@@ -1265,358 +1246,327 @@ INSERT INTO EvaluationEvent VALUES (
 
 INSERT INTO EvaluationEvent VALUES (
     20,
-    'MT1 CMAT',
     '2021-04-24 09:00:00',
     '2021-04-24 10:30:00',
-    6, -- ALGE
-    4, -- B103
-    3, -- Written
-    37  -- MT1 ALGE
+    6,
+    4,
+    3,
+    37
 );
 
 INSERT INTO EvaluationEvent VALUES (
     21,
-    'MT2 CMAT',
     '2021-06-07 09:00:00',
     '2021-06-07 10:30:00',
-    6, -- ALGE
-    7, -- B103
-    3, -- Written
-    38  -- MT1 ALGE
+    6,
+    7,
+    3,
+    38
 );
 
 INSERT INTO EvaluationEvent VALUES (
     22,
-    'MT1 FIS1',
     '2021-04-11 08:30:00',
     '2021-04-11 10:00:00',
-    7, -- ALGE
-    4, -- B103
-    3, -- Written
-    39  -- MT1 ALGE
+    7,
+    4,
+    3,
+    39
 );
 
 INSERT INTO EvaluationEvent VALUES (
     23,
-    'MT2 FIS1',
     '2021-06-10 08:30:00',
     '2021-06-10 10:00:00',
-    7, -- ALGE
-    12, -- B103
-    3, -- Written
-    40  -- MT1 ALGE
+    7,
+    12,
+    3,
+    40
 );
 
 INSERT INTO EvaluationEvent VALUES (
     24,
-    'Exame FIS1',
     '2021-06-21 08:30:00',
     '2021-06-21 10:00:00',
-    7, -- ALGE
-    10, -- B103
-    3, -- Written
-    41  -- MT1 ALGE
+    7,
+    10,
+    3,
+    41
 );
 
 INSERT INTO EvaluationEvent VALUES (
     25,
-    'Melhoria FIS1',
     '2021-07-21 13:30:00',
     '2021-07-21 15:00:00',
-    7, -- ALGE
-    7, -- B103
-    3, -- Written
-    42  -- MT1 ALGE
+    7,
+    7,
+    3,
+    42
 );
 
 INSERT INTO EvaluationEvent VALUES (
     26,
-    'Projeto MEST',
     '2021-03-02 00:00:00',
     '2021-03-16 23:59:59',
-    8, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    43  -- MT1 ALGE
+    8,
+    NULL,
+    2,
+    43
 );
 
 INSERT INTO EvaluationEvent VALUES (
     27,
-    'Exame MEST',
     '2021-06-12 11:00:00',
     '2021-06-12 12:30:00',
-    8, -- ALGE
-    6, -- B103
-    2, -- Written
-    44  -- MT1 ALGE
+    8,
+    6,
+    2,
+    44
 );
 
 INSERT INTO EvaluationEvent VALUES (
     28,
-    'Exercícios Assembly MPCP',
     '2021-04-28 00:00:00',
     '2021-06-10 23:59:59',
-    9, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    46  -- MT1 ALGE
+    9,
+    NULL,
+    2,
+    46
 );
 
 INSERT INTO EvaluationEvent VALUES (
     29,
-    'MT1 MPCP',
     '2021-05-15 08:30:00',
     '2021-05-15 10:00:00',
-    9, -- ALGE
-    10, -- B103
-    3, -- Written
-    48  -- MT1 ALGE
+    9,
+    10,
+    3,
+    48
 );
 
 INSERT INTO EvaluationEvent VALUES (
     30,
-    'Exame MPCP',
     '2021-06-15 08:30:00',
     '2021-06-15 10:00:00',
-    9, -- ALGE
-    7, -- B103
-    3, -- Written
-    49  -- MT1 ALGE
+    9,
+    7,
+    3,
+    49
 );
 
 INSERT INTO EvaluationEvent VALUES (
     31,
-    'Melhoria MPCP',
     '2021-07-03 14:30:00',
     '2021-07-03 16:00:00',
-    9, -- ALGE
-    10, -- B103
-    3, -- Written
-    50  -- MT1 ALGE
+    9,
+    10,
+    3,
+    50
 );
 
 INSERT INTO EvaluationEvent VALUES (
     32,
-    'Projeto PROG 1',
     '2021-03-30 00:00:00',
     '2021-05-01 23:59:59',
-    10, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    52  -- MT1 ALGE
+    10,
+    NULL,
+    2,
+    52
 );
 
 INSERT INTO EvaluationEvent VALUES (
     33,
-    'Projeto PROG 2',
     '2021-05-09 00:00:00',
     '2021-05-28 23:59:59',
-    10, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    53  -- MT1 ALGE
+    10,
+    NULL,
+    2,
+    53
 );
 
 INSERT INTO EvaluationEvent VALUES (
     34,
-    'Exame PROG',
     '2021-06-19 14:30:00',
     '2021-06-19 16:00:00',
-    10, -- ALGE
-    10, -- B103
-    2, -- Written
-    54  -- MT1 ALGE
+    10,
+    10,
+    2,
+    54
 );
 
 INSERT INTO EvaluationEvent VALUES (
     35,
-    'Melhoria PROG',
     '2021-07-06 09:30:00',
     '2021-07-06 11:00:00',
-    10, -- ALGE
-    11, -- B103
-    2, -- Written
-    55  -- MT1 ALGE
+    10,
+    11,
+    2,
+    55
 );
 
 ---------------------------------------------
 
 INSERT INTO EvaluationEvent VALUES (
     36,
-    'Trabalho 1 AED',
     '2021-11-15 00:00:00',
     '2021-12-17 23:55:00',
-    11, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    57  -- MT1 ALGE
+    11,
+    NULL,
+    2,
+    57
 );
 
 INSERT INTO EvaluationEvent VALUES (
     37,
-    'MTT1 AED',
     '2021-12-11 13:30:00',
     '2021-12-11 14:00:00',
-    11, -- ALGE
-    11, -- B103
-    2, -- Written
-    63  -- MT1 ALGE
+    11,
+    11,
+    2,
+    63
 );
 
 INSERT INTO EvaluationEvent VALUES (
     38,
-    'MTP1 AED',
     '2021-12-11 14:00:00',
     '2021-12-11 15:30:00',
-    11, -- ALGE
-    11, -- B103
-    3, -- Written
-    60  -- MT1 ALGE
+    11,
+    11,
+    3,
+    60
 );
 
 INSERT INTO EvaluationEvent VALUES (
     39,
-    'MTT2 AED',
     '2022-01-25 16:00:00',
     '2022-01-25 16:30:00',
-    11, -- ALGE
-    12, -- B103
-    3, -- Written
-    64  -- MT1 ALGE
+    11,
+    12,
+    3,
+    64
 );
 
 INSERT INTO EvaluationEvent VALUES (
     40,
-    'MTP2 AED',
     '2022-01-25 16:30:00',
     '2022-01-25 18:00:00',
-    11, -- ALGE
-    12, -- B103
-    2, -- Written
-    61  -- MT1 ALGE
+    11,
+    12,
+    2,
+    61
 );
 
 INSERT INTO EvaluationEvent VALUES (
     41,
-    'Entrega 1 BD',
     '2021-11-08 00:00:00',
     '2021-11-22 23:55:00',
-    12, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    66  -- MT1 ALGE
+    12,
+    NULL,
+    2,
+    66
 );
 
 
 INSERT INTO EvaluationEvent VALUES (
     42,
-    'Entrega 2 BD',
     '2021-11-23 00:00:00',
     '2021-12-12 23:55:00',
-    12, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    67  -- MT1 ALGE
+    12,
+    NULL,
+    2,
+    67
 );
 
 INSERT INTO EvaluationEvent VALUES (
     43,
-    'Entrega 3 BD',
     '2021-12-13 00:00:00',
     '2022-01-30 23:55:00',
-    12, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    68  -- MT1 ALGE
+    12,
+    NULL,
+    2,
+    68
 );
 
 INSERT INTO EvaluationEvent VALUES (
     44,
-    'MT FIS2',
     '2022-01-08 13:30:00',
     '2022-01-08 15:35:00',
-    13, -- ALGE
-    12, -- B103
-    3, -- Written
-    70  -- MT1 ALGE
+    13,
+    12,
+    3,
+    70
 );
 
 INSERT INTO EvaluationEvent VALUES (
     45,
-    'Entrega 1 LDTS',
     '2021-12-07 10:00:00',
     '2022-01-08 23:55:00',
-    14, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    73  -- MT1 ALGE
+    14,
+    NULL,
+    2,
+    73
 );
 
 INSERT INTO EvaluationEvent VALUES (
     46,
-    'Entrega 2 LDTS',
     '2022-01-09 00:00:00',
     '2022-01-22 23:55:00',
-    14, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    74  -- MT1 ALGE
+    14,
+    NULL,
+    2,
+    74
 );
 
 INSERT INTO EvaluationEvent VALUES (
     47,
-    'Entrega 3 LDTS',
     '2022-01-23 00:00:00',
     '2022-01-29 23:55:00',
-    14, -- ALGE
-    NULL, -- B103
-    2, -- Written
-    75  -- MT1 ALGE
+    14,
+    NULL,
+    2,
+    75
 );
 
 INSERT INTO EvaluationEvent VALUES (
     48,
-    'PAs TC',
     '2021-10-18 00:00:00',
     '2022-03-11 23:59:59',
-    15, -- ALGE
-    NULL, -- B103
-    3, -- Written
-    79  -- MT1 ALGE
+    15,
+    NULL,
+    3,
+    79
 );
 
 INSERT INTO EvaluationEvent VALUES (
     49,
-    'AAs TC',
     '2021-10-18 00:00:00',
     '2022-03-11 23:59:59',
-    15, -- ALGE
-    NULL, -- B103
-    3, -- Written
-    80 -- MT1 ALGE
+    15,
+    NULL,
+    3,
+    80
 );
 
 INSERT INTO EvaluationEvent VALUES (
     50,
-    'CAs TC',
     '2021-10-18 00:00:00',
     '2022-03-11 23:59:59',
-    15, -- ALGE
-    NULL, -- B103
-    3, -- Written
-    81 -- MT1 ALGE
+    15,
+    NULL,
+    3,
+    81
 );
 
--- Periods
+
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     1,
     '09:00:00',
     '10:30:00',
     'monday',
-    3, -- AOCO
+    3,
     1,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1624,9 +1574,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '10:30:00',
     '12:00:00',
     'monday',
-    5, -- MDIS
+    5,
     1,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1634,9 +1584,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '12:00:00',
     '13:30:00',
     'monday',
-    4, -- FPRO
+    4,
     1,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1644,9 +1594,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '08:30:00',
     '10:30:00',
     'tuesday',
-    1, -- ALGE
     1,
-    4 -- B013
+    1,
+    4
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1654,9 +1604,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '10:30:00',
     '12:30:00',
     'tuesday',
-    4, -- FPRO
+    4,
     1,
-    10 -- B208
+    10
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1664,9 +1614,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '14:00:00',
     '16:00:00',
     'tuesday',
-    3, -- AOCO
+    3,
     1,
-    3 -- B011
+    3
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1674,9 +1624,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '08:30:00',
     '10:00:00',
     'wednesday',
-    5, -- MDIS
+    5,
     1,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1684,9 +1634,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '10:00:00',
     '11:30:00',
     'wednesday',
-    2, -- AMAT
+    2,
     1,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject,term, classroom) VALUES (
@@ -1694,9 +1644,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject,term, classroom) VAL
     '11:30:00',
     '13:30:00',
     'wednesday',
-    1, -- ALGE
     1,
-    1 -- EaD
+    1,
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1704,9 +1654,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '09:00:00',
     '10:30:00',
     'thursday',
-    2, -- AMAT
+    2,
     1,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1714,9 +1664,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '10:30:00',
     '12:00:00',
     'thursday',
-    4, -- FPRO
+    4,
     1,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1724,9 +1674,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '12:00:00',
     '13:30:00',
     'thursday',
-    3, -- AOCO
+    3,
     1,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1734,9 +1684,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '09:00:00',
     '11:00:00',
     'friday',
-    5, -- MDIS
+    5,
     1,
-    2 -- B005
+    2
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1744,9 +1694,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '11:00:00',
     '13:00:00',
     'friday',
-    2, -- AMAT
+    2,
     1,
-    2 -- B005
+    2
 );
 
 -------------------------------------------------
@@ -1756,9 +1706,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '09:00:00',
     '10:00:00',
     'monday',
-    6, -- CMAT
+    6,
     2,
-    1 --EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1766,9 +1716,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '10:00:00',
     '11:00:00',
     'monday',
-    7, -- FISI1
+    7,
     2,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1776,9 +1726,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '11:00:00',
     '12:30:00',
     'monday',
-    10, -- PROG
+    10,
     2,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1786,9 +1736,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '09:00:00',
     '11:00:00',
     'tuesday',
-    7, -- FISI1
+    7,
     2,
-    5 -- B014
+    5
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1796,9 +1746,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '11:00:00',
     '13:00:00',
     'tuesday',
-    6, -- CMAT
+    6,
     2,
-    5 -- B014
+    5
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1806,9 +1756,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '09:00:00',
     '10:00:00',
     'wednesday',
-    7, -- FISI1
+    7,
     2,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1816,9 +1766,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '10:00:00',
     '11:00:00',
     'wednesday',
-    6, -- CMAT
+    6,
     2,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1826,9 +1776,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '11:00:00',
     '13:00:00',
     'wednesday',
-    8, -- MEST
+    8,
     2,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1836,32 +1786,29 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '17:30:00',
     '19:30:00',
     'wednesday',
-    10, -- PROG
+    10,
     2,
-    9 -- B201
+    9
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     24,
-    '09:00:01', -- TODO foi adiado em 1s
+    '09:00:00',
     '10:30:00',
     'thursday',
-    10, -- PROG  
+    10,
     2,    
-    1 -- EaD
+    1
 );
-
--- TODO Como verificar a sobreposição de aulas no mesmo dia, mas em semestres diferentes?
-
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     25,
     '10:30:00',
     '12:30:00', 
     'thursday',  
-    9, -- MPCP
+    9,
     2,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1869,9 +1816,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '13:30:00',
     '15:30:00', 
     'friday',  
-    9, -- MPCP
+    9,
     2,
-    9 -- B201
+    9
 ); 
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1879,9 +1826,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '15:30:00',
     '17:30:00',
     'friday', 
-    8, -- MEST 
+    8,
     2,
-    6 -- B017
+    6
 );
 
 -------------------------------------------------
@@ -1891,19 +1838,20 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '14:00:00',
     '15:00:00',
     'monday',
-    11, -- AED
+    11,
     3,
-    1 -- EaD
+    1
 );
 
-INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom, note) VALUES (
     29,
     '15:00:00',
     '16:00:00',
     'monday',
-    12, -- BD
+    12,
     3,
-    1 -- EaD
+    1,
+    'https://videoconf-colibri.zoom.us/j/87348858347'
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1911,19 +1859,19 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '16:00:00',
     '17:30:00',
     'monday',
-    13, -- F.II
+    13,
     3,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
     31,
-    '14:00:01', -- TODO Foi adiado 1s
+    '14:00:00',
     '16:00:00',
     'tuesday',
-    15, -- TC
+    15,
     3,
-    8  -- B110
+    8
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1931,9 +1879,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '16:00:00',
     '18:00:00',
     'tuesday',
-    14, -- LDTS
+    14,
     3,
-    12 -- B304
+    12
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1941,9 +1889,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '09:00:00',
     '11:00:00',
     'wednesday',
-    11, -- AED
+    11,
     3,
-    13 -- B308
+    13
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1951,9 +1899,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '11:00:00',
     '12:30:00',
     'wednesday',
-    13, -- F.II
+    13,
     3,
-    14 -- B323
+    14
 ); 
   
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1961,9 +1909,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '14:00:00',
     '16:00:00',
     'thursday',
-    14, -- LDTS
+    14,
     3,
-    1 -- EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1971,9 +1919,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '16:00:00',
     '18:00:00',
     'thursday',
-    15, -- TC
+    15,
     3,
-    1  --EaD
+    1
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -1981,19 +1929,20 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '18:00:00',
     '19:00:00',
     'thursday',
-    11, -- AED
+    11,
     3,
-    1  -- EaD
+    1
 );
 
-INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
+INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom, note) VALUES (
     38,
     '19:00:00',
     '20:00:00',
     'thursday',
-    12, -- BD
+    12,
     3,
-    1 -- EaD
+    1,
+    'https://videoconf-colibri.zoom.us/j/81363366128'
 );
 
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
@@ -2001,9 +1950,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     '14:00:00',
     '16:00:00',
     'friday',
-    12, -- BD
+    12,
     3,
-    7 -- B103
+    7
 );
 
 -- Tasks
@@ -2011,40 +1960,40 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
 INSERT INTO Task(id, name, done, subject) VALUES (
     1,
     'Ver aulas de AOCO',
-    1, -- done
-    3 -- AOCO
+    1,
+    3
 );
 
 INSERT INTO Task VALUES (
     2,
     'Fazer projeto de PROG',
     'Implementar leitura de ficheiros e dar commit',
-    1, -- done
-    10 -- PROG
+    1,
+    10
 );
 
 INSERT INTO Task VALUES (
     3,
     'Estudar AED',
     'Ver slides sobre algoritmos de Sorting',
-    0, -- not done
-    11 -- AED
+    0,
+    11
 );
 
 INSERT INTO Task VALUES (
     4,
     'Fazer projeto de BD',
     'Acabar 1ª entrega do trabalho',
-    1, -- done
-    12 -- BD
+    1,
+    12
 );
 
 INSERT INTO Task VALUES (
     5,
     'Fazer projeto de BD',
     'Acabar relatório e povoamento da base de dados',
-    0, -- not done
-    12 -- BD
+    0,
+    12
 );
 
 -- Lecturers
