@@ -23,7 +23,7 @@ CREATE TABLE Term(
     endDate     DATE            NOT NULL,
 
     CONSTRAINT ValidOccurence CHECK (startDate < endDate),
-    UNIQUE (startDate, endDate)
+    CONSTRAINT UniqueDate UNIQUE (startDate, endDate)
 );
 
 CREATE TABLE Professor(
@@ -50,7 +50,7 @@ CREATE TABLE Classroom(
     name        VARCHAR(255)    NOT NULL,
 
     classroomLocation REFERENCES Institution ON DELETE CASCADE ON UPDATE CASCADE NOT NULL,
-    UNIQUE (name, classroomLocation)
+    CONSTRAINT UniqueNameLocation UNIQUE (name, classroomLocation)
 );
 
 CREATE TABLE GradeLimit(
@@ -94,7 +94,7 @@ CREATE TABLE Period(
     term REFERENCES Term ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     classroom REFERENCES Classroom ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     CONSTRAINT ValidOccurence CHECK (startTime < endTime),
-    UNIQUE (startTime, endTime, weekday, term)
+    CONSTRAINT UniqueDateTimeTerm UNIQUE (startTime, endTime, weekday, term)
 );
 
 CREATE TABLE Task(
