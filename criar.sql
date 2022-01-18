@@ -1,5 +1,4 @@
 PRAGMA foreign_keys=ON;
-BEGIN TRANSACTION;
 
 DROP TABLE IF EXISTS TermGrades;
 DROP TABLE IF EXISTS TermSubjects;
@@ -58,7 +57,7 @@ CREATE TABLE GradeLimit(
     lower       REAL            NOT NULL,
     upper       REAL            NOT NULL,
 
-    UNIQUE (lower, upper),
+    CONSTRAINT UniqueLimits UNIQUE (lower, upper),
     CONSTRAINT ValidRange CHECK (lower < upper)
 );
 
@@ -122,7 +121,7 @@ CREATE TABLE TermGrades(
     term REFERENCES Term ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     subject REFERENCES Subject ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     grade PRIMARY KEY REFERENCES GradeComponent ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
-    UNIQUE (term, subject)
+    CONSTRAINT UniqueTermSubject UNIQUE (term, subject)
 );
 
 CREATE TABLE Lecturer(
@@ -130,5 +129,3 @@ CREATE TABLE Lecturer(
     professor REFERENCES Professor ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     PRIMARY KEY (professor, period)
 );
-
-COMMIT;
