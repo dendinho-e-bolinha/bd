@@ -1,5 +1,4 @@
 PRAGMA foreign_keys=ON;
-BEGIN TRANSACTION;
 
 DROP TABLE IF EXISTS TermGrades;
 DROP TABLE IF EXISTS TermSubjects;
@@ -23,7 +22,7 @@ CREATE TABLE Term(
     endDate     DATE            NOT NULL,
 
     CONSTRAINT ValidOccurence CHECK (startDate < endDate),
-    UNIQUE (startDate, endDate)
+    CONSTRAINT UniqueDate UNIQUE (startDate, endDate)
 );
 
 CREATE TABLE Professor(
@@ -50,7 +49,7 @@ CREATE TABLE Classroom(
     name        VARCHAR(255)    NOT NULL,
 
     classroomLocation REFERENCES Institution ON DELETE CASCADE ON UPDATE CASCADE NOT NULL,
-    UNIQUE (name, classroomLocation)
+    CONSTRAINT UniqueNameLocation UNIQUE (name, classroomLocation)
 );
 
 CREATE TABLE GradeLimit(
@@ -58,13 +57,13 @@ CREATE TABLE GradeLimit(
     lower       REAL            NOT NULL,
     upper       REAL            NOT NULL,
 
-    UNIQUE (lower, upper),
+    CONSTRAINT UniqueLimits UNIQUE (lower, upper),
     CONSTRAINT ValidRange CHECK (lower < upper)
 );
 
 CREATE TABLE EvaluationType(
     id          INTEGER         PRIMARY KEY,
-    name        VARCHAR(15)     UNIQUE NOT NULL CONSTRAINT ValidName CHECK (name IN ('written', 'oral', 'practical'))
+    name        VARCHAR(15)     CONSTRAINT UniqueName UNIQUE NOT NULL CONSTRAINT ValidName CHECK (name IN ('written', 'oral', 'practical'))
 );
 
 CREATE TABLE GradeComponent(
@@ -94,7 +93,7 @@ CREATE TABLE Period(
     term REFERENCES Term ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     classroom REFERENCES Classroom ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     CONSTRAINT ValidOccurence CHECK (startTime < endTime),
-    UNIQUE (startTime, endTime, weekday, term)
+    CONSTRAINT UniqueDateTimeTerm UNIQUE (startTime, endTime, weekday, term)
 );
 
 CREATE TABLE Task(
@@ -122,7 +121,7 @@ CREATE TABLE TermGrades(
     term REFERENCES Term ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     subject REFERENCES Subject ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     grade PRIMARY KEY REFERENCES GradeComponent ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
-    UNIQUE (term, subject)
+    CONSTRAINT UniqueTermSubject UNIQUE (term, subject)
 );
 
 CREATE TABLE Lecturer(
@@ -130,5 +129,3 @@ CREATE TABLE Lecturer(
     professor REFERENCES Professor ON DELETE RESTRICT ON UPDATE CASCADE NOT NULL,
     PRIMARY KEY (professor, period)
 );
-
-COMMIT;
