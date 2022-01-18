@@ -63,7 +63,7 @@ CREATE TABLE GradeLimit(
 
 CREATE TABLE EvaluationType(
     id          INTEGER         PRIMARY KEY,
-    name        VARCHAR(15)     UNIQUE NOT NULL CONSTRAINT ValidName CHECK (name IN ('written', 'oral', 'practical'))
+    name        VARCHAR(15)     CONSTRAINT UniqueName UNIQUE NOT NULL CONSTRAINT ValidName CHECK (name IN ('written', 'oral', 'practical'))
 );
 
 CREATE TABLE GradeComponent(
