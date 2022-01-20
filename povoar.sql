@@ -1,5 +1,4 @@
 PRAGMA foreign_keys=ON;
-BEGIN TRANSACTION;
 
 -- Term
 
@@ -2259,5 +2258,3 @@ UPDATE Professor SET photo = 'andre_restivo.jpg' WHERE id = 23;
 UPDATE Professor SET photo = 'rui_abreu.jpg' WHERE id = 24;
 UPDATE Professor SET photo = 'joao_bispo.jpg' WHERE id = 25;
 UPDATE Professor SET photo = 'joao_cardoso.jpg' WHERE id = 26;
-
-COMMIT;
