@@ -212,27 +212,27 @@ INSERT INTO EvaluationType VALUES (3, 'written');
 
 -- Subjects and Grade Components
 
-INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (1, 'Avaliação de ALGE', 1, 18, 1);
-INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (2, 'Avaliação de AMAT', 1, 20, 1);
-INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (3, 'Avaliação de AOCO', 1, 19, 1);
-INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (4, 'Avaliação de FPRO', 1, 20, 1);
-INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (5, 'Avaliação de MDIS', 1, 18, 1);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (1, 'Avaliação de ALGE', 1, 18, 4.5);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (2, 'Avaliação de AMAT', 1, 20, 6);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (3, 'Avaliação de AOCO', 1, 19, 6);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (4, 'Avaliação de FPRO', 1, 20, 6);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (5, 'Avaliação de MDIS', 1, 18, 6);
 
 -------------------------------------------------
 
-INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (6, 'Avaliação de CMAT', 1, 20, 1);
-INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (7, 'Avaliação de FISI1', 1, 16,1);
-INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (8, 'Avaliação de MEST', 1, 18, 1);
-INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (9, 'Avaliação de MPCP', 1, 20, 1);
-INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (10, 'Avaliação de PROG', 1, 20, 1);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (6, 'Avaliação de CMAT', 1, 20, 6);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (7, 'Avaliação de FISI1', 1, 16, 6);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (8, 'Avaliação de MEST', 1, 18, 6);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (9, 'Avaliação de MPCP', 1, 20, 6);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (10, 'Avaliação de PROG', 1, 20, 7.5);
 
 -------------------------------------------------
 
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (11, 'Avaliação de AED', 1);
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (12, 'Avaliação de BD', 1);
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (13, 'Avaliação de F.II', 1);
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (14, 'Avaliação de LDTS', 1);
-INSERT INTO GradeComponent(id, name, gradeLimit) VALUES (15, 'Avaliação de TC', 1);
+INSERT INTO GradeComponent(id, name, gradeLimit, weight) VALUES (11, 'Avaliação de AED', 1, 6);
+INSERT INTO GradeComponent(id, name, gradeLimit, weight) VALUES (12, 'Avaliação de BD', 1, 6);
+INSERT INTO GradeComponent(id, name, gradeLimit, weight) VALUES (13, 'Avaliação de F.II', 1, 4.5);
+INSERT INTO GradeComponent(id, name, gradeLimit, weight) VALUES (14, 'Avaliação de LDTS', 1, 6);
+INSERT INTO GradeComponent(id, name, gradeLimit, weight) VALUES (15, 'Avaliação de TC', 1, 6);
 
 -------------------------------------------------
 
