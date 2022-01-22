@@ -4,8 +4,10 @@ FOR EACH ROW
 BEGIN
     SELECT RAISE(ABORT, 'The period belongs to a subject not taken that term')
     WHERE NOT EXISTS (
-        SELECT Period.subject as subject 
-        FROM Period
-        WHERE New.subject = Period.subject
+        SELECT TermGrades.subject as subject,
+            TermGrades.term as term
+        FROM TermGrades
+        WHERE New.subject = subject
+        AND New.term = term
     );
 END;
