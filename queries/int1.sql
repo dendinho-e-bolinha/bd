@@ -1,6 +1,6 @@
-SELECT count(*) as evalutaion_events,
-    Subject.name,
-    Term.name
+SELECT count(*) as nr,
+    Subject.name as subject,
+    Term.name as term
 FROM EvaluationEvent event,
     TermGrades,
     Subject,
@@ -27,5 +27,5 @@ WHERE TermGrades.subject = Subject.id
 GROUP BY Subject.id,
     Term.id
 ORDER BY Term.startDate DESC,
-    Term.id DESC,
+    Term.name ASC,
     Subject.name ASC;

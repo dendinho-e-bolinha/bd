@@ -1,6 +1,6 @@
-SELECT Period.weekday as weekday,
-    Period.startTime as startTime,
-    Period.endTime as endTime,
+SELECT upper(substring(Period.weekday, 1, 1)) || lower(substring(Period.weekday, 2)) as weekday,
+    strftime('%Hh%M', Period.startTime) as startTime,
+    strftime('%Hh%M', Period.endTime) as endTime,
     Classroom.name as classroom,
     Subject.name as subject,
     Term.name as term,
@@ -14,17 +14,16 @@ WHERE Institution.id = Classroom.classroomLocation
     AND Period.classroom = Classroom.id
     AND Period.subject = Subject.id
     AND Period.term = Term.id
-ORDER BY institution ASC,
+ORDER BY Institution.name ASC,
     Term.startDate DESC,
-    Term.endDate DESC,
+    Term.name ASC,
     case
-        when weekday = 'monday' then 1
-        when weekday = 'tuesday' then 2
-        when weekday = 'wednesday' then 3
-        when weekday = 'thursday' then 4
-        when weekday = 'friday' then 5
-        when weekday = 'saturday' then 6
-        when weekday = 'sunday' then 7
-    end,
-    startTime ASC,
-    endTime ASC
+        when Period.weekday = 'monday' then 1
+        when Period.weekday = 'tuesday' then 2
+        when Period.weekday = 'wednesday' then 3
+        when Period.weekday = 'thursday' then 4
+        when Period.weekday = 'friday' then 5
+        when Period.weekday = 'saturday' then 6
+        when Period.weekday = 'sunday' then 7
+    end ASC,
+    Period.startTime ASC;
