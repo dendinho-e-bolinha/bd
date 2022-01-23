@@ -7,17 +7,17 @@ BEGIN
             SELECT *
             FROM Period P
             WHERE P.id <> New.id
-                AND (
+                AND NOT (
                     (
-                        New.startTime < P.startTime
-                        OR 
-                        New.endTime < P.endTime
+                        New.startTime <= P.startTime
+                        AND 
+                        New.endTime <= P.startTime
                     )
-                    OR 
+                    OR
                     (
-                        New.startTime > P.startTime
-                        OR 
-                        New.endTime > P.endTime
+                        New.startTime >= P.endTime
+                        AND 
+                        New.endTime >= P.endTime
                     )
                 )
         );

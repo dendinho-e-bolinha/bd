@@ -34,9 +34,11 @@ WITH RECURSIVE Tree(
 )
 SELECT Term.name,
     round(
-        sum(weight * (value - lbound) / (ubound - lbound)) * (20 - 0) + 0,
+        sum(weight * (value - lbound) / (ubound - lbound)) * (GradeLimit.upper - GradeLimit.lower) + GradeLimit.lower,
         2
-    ) as grade
+    ) as grade,
+    GradeLimit.upper as max,
+    GradeLimit.lower as min
 FROM Tree,
     Term,
     GradeLimit
@@ -47,16 +49,15 @@ WHERE Term.id = Tree.term
         FROM GradeComponent gc
         WHERE gc.parent IS NOT NULL
     )
-    AND GradeLimit.id = 1
+    AND GradeLimit.id IN (
+        SELECT GradeComponent.gradeLimit
+        FROM TermGrades,
+            GradeComponent
+        WHERE TermGrades.grade = GradeComponent.id
+            AND TermGrades.term = Term.id
+        GROUP BY GradeComponent.gradeLimit
+        ORDER BY count(*) DESC,
+            id ASC
+        LIMIT 1
+    )
 GROUP BY Tree.term;
-
-SELECT term, gradeLimit FROM (
-    SELECT TermGrades.term,
-        GradeComponent.gradeLimit,
-        count(*) as nr
-    FROM TermGrades,
-        GradeComponent
-    WHERE TermGrades.grade = GradeComponent.id
-    GROUP BY TermGrades.term,
-        GradeComponent.gradeLimit
-) GROUP BY term HAVING nr = max(nr);
