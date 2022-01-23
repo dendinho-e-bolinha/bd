@@ -1,5 +1,5 @@
-CREATE TRIGGER gradeWithinLimits 
-BEFORE INSERT ON GradeComponent 
+CREATE TRIGGER gradeWithinLimits
+BEFORE INSERT ON GradeComponent
 FOR EACH ROW 
 BEGIN
     SELECT RAISE(ABORT, 'The grade is not within chosen limits')
