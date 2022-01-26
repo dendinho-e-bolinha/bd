@@ -1,14 +1,17 @@
 from subprocess import Popen, PIPE
-from typing import Tuple
+from typing import Tuple, Union
 from config import config
 
 if 'createDb' not in config or 'populateDb' not in config:
     raise Exception('Invalid configuration')
 
 
-def get_html_from_query(query: str) -> Tuple[bool, str] | None:
+def get_html_from_query(query: str) -> Union[Tuple[bool, str], None]:
     commands = [
         f'.read {config["createDb"]}',
+        '.read ../triggers/gatilho1_adiciona.sql',
+        '.read ../triggers/gatilho2_adiciona.sql',
+        '.read ../triggers/gatilho3_adiciona.sql',
         f'.read {config["populateDb"]}',
         '.mode html',
         '.headers on',
