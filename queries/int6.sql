@@ -1,4 +1,4 @@
-SELECT upper(substring(Period.weekday, 1, 1)) || lower(substring(Period.weekday, 2)) as weekday,
+SELECT upper(substr(Period.weekday, 1, 1)) || lower(substr(Period.weekday, 2)) as weekday,
     strftime('%Hh%M', Period.startTime) as startTime,
     strftime('%Hh%M', Period.endTime) as endTime,
     Classroom.name as classroom,

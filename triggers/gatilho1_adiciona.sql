@@ -10,6 +10,8 @@ BEGIN
             SELECT *
             FROM Period P
             WHERE P.id <> New.id
+                AND P.term = New.term
+                AND P.weekday = New.weekday
                 AND NOT (
                     (
                         New.startTime <= P.startTime

@@ -233,6 +233,7 @@ INSERT INTO GradeComponent(id, name, gradeLimit, weight) VALUES (12, 'Avaliaçã
 INSERT INTO GradeComponent(id, name, gradeLimit, weight) VALUES (13, 'Avaliação de F.II', 1, 0.2);
 INSERT INTO GradeComponent(id, name, gradeLimit, weight) VALUES (14, 'Avaliação de LDTS', 1, 0.2);
 INSERT INTO GradeComponent(id, name, gradeLimit, weight) VALUES (15, 'Avaliação de TC', 1, 0.2);
+INSERT INTO GradeComponent(id, name, gradeLimit, value, weight) VALUES (100, 'Avaliação de FPRO', 1, 20, 0.2);
 
 -------------------------------------------------
 
@@ -302,7 +303,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     23,
     'PEs FPRO',
-    20,
+    17,
     0.5,
     1,
     4
@@ -320,7 +321,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     25,
     'PE2 FPRO',
-    20,
+    7.3,
     0.333,
     1,
     23
@@ -329,7 +330,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     26,
     'PE3 FPRO',
-    20,
+    5.2,
     0.333,
     1,
     23
@@ -338,7 +339,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     27,
     'PE4 FPRO',
-    20,
+    3.1,
     0.333,
     1,
     23
@@ -383,7 +384,7 @@ INSERT INTO GradeComponent VALUES (
 INSERT INTO GradeComponent VALUES (
     32,
     'TE1 FPRO',
-    20,
+    2.0,
     0.3,
     1,
     4
@@ -843,6 +844,87 @@ INSERT INTO GradeComponent VALUES (
     15
 );
 
+INSERT INTO GradeComponent VALUES (
+    83,
+    'PEs FPRO',
+    20,
+    0.5,
+    1,
+    100
+);
+
+INSERT INTO GradeComponent VALUES (
+    84,
+    'PE1 FPRO',
+    20,
+    0.333,
+    1,
+    83
+);
+
+INSERT INTO GradeComponent VALUES (
+    85,
+    'PE2 FPRO',
+    20,
+    0.333,
+    1,
+    83
+);
+
+INSERT INTO GradeComponent VALUES (
+    86,
+    'PE3 FPRO',
+    20,
+    0.333,
+    1,
+    83
+);
+
+INSERT INTO GradeComponent VALUES (
+    88,
+    'AD FPRO (REs, LEs e PROJ)',
+    20,
+    0.2,
+    1,
+    100
+);
+
+INSERT INTO GradeComponent VALUES (
+    89,
+    'LEs FPRO',
+    20,
+    0,
+    1,
+    88
+);
+
+INSERT INTO GradeComponent VALUES (
+    90,
+    'REs FPRO',
+    19.8,
+    0,
+    1,
+    88
+);
+
+INSERT INTO GradeComponent VALUES (
+    91,
+    'PROJ FPRO',
+    20,
+    1,
+    1,
+    88
+);
+
+INSERT INTO GradeComponent VALUES (
+    92,
+    'TE1 FPRO',
+    20,
+    0.3,
+    1,
+    100
+);
+
 ---------------------------------------------
 
 INSERT INTO Subject VALUES (
@@ -1029,6 +1111,12 @@ INSERT INTO TermGrades VALUES(
     3,
     15,
     15
+);
+
+INSERT INTO TermGrades VALUES(
+    3,
+    4,
+    100
 );
 
 -- Classrooms
@@ -1555,6 +1643,80 @@ INSERT INTO EvaluationEvent VALUES (
     3,
     81
 );
+
+
+
+INSERT INTO EvaluationEvent VALUES (
+    51,
+    '2021-11-07 08:30:00',
+    '2021-11-07 10:00:00',
+    4,
+    12,
+    3,
+    84
+);
+
+INSERT INTO EvaluationEvent VALUES (
+    52,
+    '2021-12-02 08:30:00',
+    '2021-12-02 10:00:00',
+    4,
+    7,
+    3,
+    85
+);
+
+INSERT INTO EvaluationEvent VALUES (
+    53,
+    '2022-01-09 08:30:00',
+    '2022-01-09 10:00:00',
+    4,
+    7,
+    3,
+    86
+);
+
+INSERT INTO EvaluationEvent VALUES (
+    54,
+    '2021-10-12 13:20:00',
+    '2022-01-21 12:00:00',
+    4,
+    1,
+    3,
+    89
+);
+
+INSERT INTO EvaluationEvent VALUES (
+    55,
+    '2021-10-19 08:00:00',
+    '2022-01-25 08:00:00',
+    4,
+    NULL,
+    2,
+    90
+);
+
+INSERT INTO EvaluationEvent VALUES (
+    56,
+    '2021-12-04 00:00:00',
+    '2022-01-25 23:59:59',
+    4,
+    NULL,
+    2,
+    91
+);
+
+INSERT INTO EvaluationEvent VALUES (
+    57,
+    '2022-02-03 08:30:00',
+    '2022-02-03 10:00:00',
+    4,
+    13,
+    3,
+    92
+);
+
+
 
 
 

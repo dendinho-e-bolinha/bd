@@ -60,4 +60,5 @@ WHERE Term.id = Tree.term
             id ASC
         LIMIT 1
     )
-GROUP BY Tree.term;
+GROUP BY Tree.term
+ORDER BY Term.startDate DESC, Term.name ASC;

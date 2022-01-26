@@ -1,8 +1,6 @@
-SELECT *
-FROM period;
-
+.print "1 - deve falhar"
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
-    1,
+    40,
     '09:30:00',
     '10:30:00',
     'monday',
@@ -11,11 +9,9 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     1
 );
 
-SELECT *
-FROM period;
-
+.print "2 - deve funcionar"
 INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VALUES (
-    1,
+    41,
     '23:30:00',
     '24:00:00',
     'monday',
@@ -23,6 +19,3 @@ INSERT INTO Period(id, startTime, endTime, weekday, subject, term, classroom) VA
     1,
     1
 );
-
-SELECT *
-FROM period;

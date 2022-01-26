@@ -26,6 +26,6 @@ WHERE TermGrades.subject = Subject.id
     )
 GROUP BY Subject.id,
     Term.id
-ORDER BY Term.startDate DESC,
+ORDER BY nr DESC, Term.startDate DESC,
     Term.name ASC,
     Subject.name ASC;
